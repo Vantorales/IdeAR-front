@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+    background-color: #fffefe;
+    margin: 0;
+}
+
+nav{
+    background-color: #fffefe;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0.5em;
+}
+
+nav li{
+    list-style: none;
+    display: inline-block;
+}
+
+nav a{
+    color: #1a2932;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin:1em;
+    font-size: 1.2em;
+    -webkit-transition: 0.5s all;   
+    -webkit-transition-delay: 0.5s; 
+    -moz-transition: 0.5s all;   
+    -moz-transition-delay: 0.5s; 
+    -ms-transition: 0.5s all;   
+    -ms-transition-delay: 0.5s; 
+    -o-transition: 0.5s all;   
+    -o-transition-delay: 0.5s; 
+    transition: 0.5s all;   
+    transition-delay: 0.5s; 
+}
+
+nav a:hover{
+    color: #98c7d7;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+nav a i{
+    color: #1a2932;
+}
+
+.fa-brain{
+    background: -webkit-linear-gradient(#98c7d7,#636363);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+}
+
+header{
+    background-color: #98c7d7;
+    margin: 0;
+}
+
+.mainHeader{
+    display: flex;
+    padding-left: 10em;
+    padding-top: 14em;
+    padding-right: 10em;
+    padding-bottom: 5em;
+}
+
+.infoHeader a{
+    width: 10em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fffefe;
+    color: #1a2932;
+    padding: 1em;
+    display: block;
+    border: 0.2em solid #fffefe;
+    border-radius: 2em;
+}
+
+.infoHeader a:hover{
+    color: #98c7d7;
+}
+
+.infoHeader h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #1a2932;
+}
+
+header img{
+    display: inline-block;
+}
+
+header svg{
+    margin-bottom: -0.3em;
+}
+
+header#roadmap, header#destacado{
+    background-color: transparent;
+    position:absolute;
+}
+
+header#roadmap h2, header#destacado h2{
+    border-bottom: 0.1em solid black;
+    font-size: 2em;
+}
+
+.roadMap, .destacado{
+    display: flex;
+    justify-content: center;
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+.roadMap h2, .destacado h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #1a2932;
+}
+
+.roadMap section, .destacado section{
+    border: 0.1em solid #1a2932;
+    width: 14em;
+    height: 20em;
+    margin: 1em;
+    margin-top: 10em;
+    padding: 1em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.destacado section{
+    width: 18em;
+    height: 25em;
+    display: block;
+    text-align: justify!important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+.destacado section img{
+    width: 18em;
+    height: 10em;
+}
+
+p.mainDate, p.mainAuthor {
+    display: inline-block;
+    font-weight: bolder;
+    padding: 0.4em;
+    color: #4c646c;
+}
+
+p.mainDate{
+    float: right;
+}
+
