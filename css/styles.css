@@ -2,7 +2,9 @@
 
 :root{
     --main-bg-color: #fffefe;
-    --main-ad-color: #cfecf4;
+    --main-bg2-color: #f0f1f3;
+    --main-ad-color: #6899b6;
+    --main-ad2-color: #395262;
     --main-txt-color: #151c27;
 }
 
@@ -11,14 +13,20 @@ body{
     margin: 0;
 }
 
+h1,h2,h3,h4,h5{
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-txt-color);
+}
+
 nav{
-    background-color: var(--main-ad-color);
+    background-color: var(--main-bg2-color);
     position: fixed;
     width: 100%;
     z-index: 1;
     top: 0;
     left: 0;
     padding: 0.5em;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ol{
@@ -44,11 +52,9 @@ nav ol.userOptions li{
     border-radius: 5%;
 }
 
-
 nav a{
     color: var(--main-txt-color);
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
     margin:1em;
     font-size: 1em;
     -webkit-transition: 0.5s all;   
@@ -90,17 +96,14 @@ header{
 
 .mainHeader{
     display: flex;
-    padding-left: 10em;
-    padding-top: 14em;
-    padding-right: 10em;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
 }
 
 .mainHeader img{
-    width: 45em;
-    height: 45em;
-    display: flex;
-    align-items: center;
-    margin-top: -10em;
+    width: 40em;
+    height: 40em;
 }
 
 .infoHeader a{
@@ -121,116 +124,189 @@ header{
 }
 
 .infoHeader h1{
-    font-family: 'Roboto', sans-serif;
     font-size: 3.5em;
     color: var(--main-txt-color);
 }
-
 
 header svg{
     margin-bottom: -0.3em;
 }
 
-header#roadmap, header#subscripciones{
-    background-color: transparent;
-    position:absolute;
+
+section.container {
+    background-color: var(--main-bg2-color);
+    padding: 6em 2em 6em;
+    width: auto!important;
 }
 
-header#roadmap h2, section.destacado h2, header#subscripciones, section.contactar h2{
-    border-bottom: 0.1em solid var(--main-txt-color);
-    font-size: 2em!important;
-}
-
-.roadMap, section.destacado, .subscripciones {
+section.items{
     display: flex;
+    flex-wrap: wrap; 
     justify-content: center;
-    margin-top: 5em;
-    margin-bottom: 10em;
+    column-gap: 1em;
+    row-gap: 1em;
 }
 
-.roadMap h2, section.destacado h2, .subscripciones h2, section.contactar h2{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
-    color: var(--main-txt-color)!important;
-}
-
-section.destacado h2{
-    position: absolute;
-}
-
-section.destacado header h2{ 
-    position: relative;
-    border: 0;
-    font-size: 1.4em!important;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-}
-
-section.destacado header{
-    background-color: transparent!important;
-}
-
-.roadMap section, section.destacado article, .subscripciones section{
-    border: 0.1em solid #1a2932;
-    width: 14em;
-    height: 20em;
-    margin: 1em;
-    margin-top: 10em;
-    padding: 1em;
-    display: flex;
+section.container h2.mainTitle{
     text-align: center;
-    justify-content: center;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+
+h2#roadMap span, h2#destacado span {
+    border-bottom: 0.4em solid #6899b652;
+}
+
+section.roadMap, article.lastNews, section.subscriptions{
+    width: 14em;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 1em;
+    border-radius: 0.5em;
 }
 
-section.destacado article{
-    width: 18em;
-    height: auto;
+section.container.contactForm, section.container.news{
+    background-color: var(--main-bg-color);
+}
+
+article.lastNews{
     display: block;
-    text-align: justify!important;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    border: 0.1em solid var(--main-bg2-color);
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
 }
 
-section.destacado img{
-    width: 18em;
-    height: 10em;
+article.lastNews img {
+    width: 14em;
+    height: 8em;
 }
 
-section.destacado p{
-    margin: 0;
-    font-size: 0.9em;
-    text-align: justify;
-    line-height: 120%;
-}
-
-section.destacado footer{
-    background-color: transparent!important;
-    padding: 0.5em!important;
+section.roadMap h2, article.lastNews h2, section.subscriptions h2{
+    font-size: 1.2em;
+    margin: 0 auto;
     margin-top: 1em;
 }
-section.destacado p.mainDate, section.destacado p.mainAuthor {
-    display: inline-block;
-    font-weight: bolder;
-    padding: 0.4em;
-    color: #4c646c;
+
+article.lastNews header{
+    background-color: transparent!important;
+    margin: 0 auto;
 }
 
-section.destacado p.mainDate{
+section.roadMap p, article.lastNews p, section.subscriptions p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--main-txt-color);
+}
+
+section.subscriptions p, article.lastNews p{
+    text-align: justify;
+}
+
+p.mountSubscription{
+    font-size: 1em!important;
+    font-weight: bold;
+    display: inline-block;
+}
+
+a.getSubscription{
+    display: inline-block;
+}
+
+.fa-lightbulb, .fa-wifi, .fa-handshake, .fa-building-user, .fa-cart-shopping {
+    width: 0.7em;
+    height: 0.7em;
+    background-color: var(--main-ad-color);
+    font-size: 1em;
+    color: var(--main-bg2-color);
+    padding: 1em;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+article.lastNews footer{
+    background-color: transparent!important;
+    padding: 0;
+}
+
+article.lastNews footer section.mainAuthor, article.lastNews footer section.mainDate{
+    width: auto;
+    height: auto;
+    background: var(--main-bg2-color);
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5em;
+}
+
+article.lastNews footer section.mainAuthor p, article.lastNews footer section.mainDate p{
+    margin: 0 auto;
+}
+
+article.lastNews footer p{
+    display: block!important;
+}
+
+section.mainDate {
     float: right;
 }
 
-section.contactar {
-    display: flex;
+
+section.dataForm{
+    padding: 2em;
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
+    border-radius: 2%;
 }
 
+.formField{
+    margin: 1em;
+}
 
-section.contactar img{
-    display: inline-block;
+.formField label{
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+}
+
+.formField input {
+    font-size: 0.8em;
+    padding: 0.2em 0.6em;
+    width: 20em;
+    display: block;
+    min-height: 2em;
+    border: unset;
+    outline-color: rgb(84 105 212 / 0.5);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid var(--main-ad2-color);
+}
+
+.formField input.messageForm{
+    width: 20em;
+    height: 10em;
+    overflow: auto;
+}
+
+.formField input[type="submit"] {
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                rgb(84, 105, 212) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 footer{
-    background-color: #98c7d7;
+    background-color: var(--main-ad-color);
     padding-top: 10em;
 }
 
