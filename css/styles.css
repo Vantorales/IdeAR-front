@@ -257,7 +257,6 @@ section.mainDate {
 
 section.dataForm{
     padding: 2em;
-    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
     border-radius: 2%;
 }
 
@@ -268,31 +267,37 @@ section.dataForm{
 .formField label{
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: bolder;
     font-size: 0.8em;
     letter-spacing: 0.2em;
 }
 
-.formField input {
-    font-size: 0.8em;
-    padding: 0.2em 0.6em;
-    width: 20em;
-    display: block;
+.formField input, .formField textarea {
+    width: 24em;
     min-height: 2em;
+    background-color: var(--main-bg2-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    color: var(--main-txt-color);
+    padding: 0.2em 0.6em;
+    display: block;
     border: unset;
-    outline-color: rgb(84 105 212 / 0.5);
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid var(--main-ad2-color);
+    outline-color: var(--main-bg2-color);
+    border-bottom: 0.1em solid var(--main-ad2-color);
 }
 
-.formField input.messageForm{
-    width: 20em;
+.formField textarea{
+    width: 24em;
     height: 10em;
-    overflow: auto;
+    font-size: 0.8em;
+    overflow: hidden;
+    resize: none;
 }
 
 .formField input[type="submit"] {
-    background-color: rgb(84, 105, 212);
+    width: 25.2em;
+    background-color: var(--main-ad2-color);
+    text-transform: uppercase;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                 rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                 rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
@@ -303,6 +308,10 @@ section.dataForm{
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+}
+
+section.container.contactForm section.items img{
+    width: 40em;
 }
 
 footer{
