@@ -8,6 +8,10 @@
     --main-txt-color: #151c27;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--main-bg-color) ;
     margin: 0;
