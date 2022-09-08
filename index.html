@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
 </head>
-<body> 
+<body>
     <nav>
-        <ol>
-            <li><a href="#home"><i class='fas fa-brain'></i> Ide.AR</a></li>
+        <a href="#home" class="logoNav"><i class='fas fa-brain'></i> IdeAR</a>
+        <span class="menuIcon">Abrir menu</span>
+        <ol class="navOptions">
             <li><a href="#roadMap">RoadMap</a></li>
             <li><a href="#destacado">Destacado</a></li>
             <li><a href="#pricing">Suscripciones</a></li>
@@ -23,7 +26,6 @@
             <li><a href="">Registrarse</a></li>
         </ol>
     </nav>
-
     <header class="mainHeader">
         <section class="infoHeader">
             <h1>Conectando ideas, materializando sueños</h1>
@@ -32,186 +34,187 @@
         <img src="/img/main.svg">
     </header>
 
-    <section class="container" id="roadMap">
-        <h2 class="mainTitle">
-            <span>
-                Roadmap
-            </span>
-        </h2>
-        <section class="items">
-            <section class="roadMap">
-                <i class="fa-regular fa-lightbulb"></i>
-                <h2>Idear</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
-                </p>
-            </section>
+    <main>
+        <section class="container" id="roadMap">
+            <h2 class="mainTitle">
+                <span>
+                    Roadmap
+                </span>
+            </h2>
+            <section class="items">
+                <section class="roadMap">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <h2>Idear</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
+                    </p>
+                </section>
 
-            <section class="roadMap">
-                <i class="fa-solid fa-wifi"></i>
-                <h2>Conectar</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
-                </p>
-            </section>
+                <section class="roadMap">
+                    <i class="fa-solid fa-wifi"></i>
+                    <h2>Conectar</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
+                    </p>
+                </section>
 
-            <section class="roadMap">
-                <i class="fa-regular fa-handshake"></i>
-                <h2>Colaborar</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
-                </p>
-            </section>
+                <section class="roadMap">
+                    <i class="fa-regular fa-handshake"></i>
+                    <h2>Colaborar</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
+                    </p>
+                </section>
 
-            <section class="roadMap">
-                <i class="fa-solid fa-building-user"></i>
-                <h2>Construir</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
-                </p>
+                <section class="roadMap">
+                    <i class="fa-solid fa-building-user"></i>
+                    <h2>Construir</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, alias.
+                    </p>
+                </section>
             </section>
         </section>
-    </section>
 
-    <section class="container news" id="destacado">
-        <h2 class="mainTitle">
-            <span>
-                Publicaciones Destacadas
-            </span>
-        </h2>
-        <section class="items">
-            <article class="lastNews">
-                <img src="">
-                <header>
-                    <h2>Titulo</h2>
-                </header>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea culpa cum sed temporibus fuga ipsam nihil fugiat atque voluptate aperiam.
-                </p>
-                <footer>
-                    <section class="mainAuthor">
-                        <p>
-                            <i class="fas fa-user"></i> Autor
-                        </p>
-                    </section>
-                    <section class="mainDate">
-                        <p>
-                            <i class="fa-solid fa-calendar-days"></i> 29/08/2022
-                        </p>
-                    </section>
-                </footer>
-            </article>
+        <section class="container news" id="destacado">
+            <h2 class="mainTitle">
+                <span>
+                    Publicaciones Destacadas
+                </span>
+            </h2>
+            <section class="items">
+                <article class="lastNews">
+                    <img src="">
+                    <header>
+                        <h2>Titulo</h2>
+                    </header>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea culpa cum sed temporibus fuga ipsam nihil fugiat atque voluptate aperiam.
+                    </p>
+                    <footer>
+                        <section class="mainAuthor">
+                            <p>
+                                <i class="fas fa-user"></i> Autor
+                            </p>
+                        </section>
+                        <section class="mainDate">
+                            <p>
+                                <i class="fa-solid fa-calendar-days"></i> 29/08/2022
+                            </p>
+                        </section>
+                    </footer>
+                </article>
 
-            <article class="lastNews">
-                <img src="">
-                <header>
-                    <h2>Titulo</h2>
-                </header>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea culpa cum sed temporibus fuga ipsam nihil fugiat atque voluptate aperiam.
-                </p>
-                <footer>
-                    <section class="mainAuthor">
-                        <p>
-                            <i class="fas fa-user"></i> Autor
-                        </p>
-                    </section>
-                    <section class="mainDate">
-                        <p>
-                            <i class="fa-solid fa-calendar-days"></i> 29/08/2022
-                        </p>
-                    </section>
-                </footer>
-            </article>
+                <article class="lastNews">
+                    <img src="">
+                    <header>
+                        <h2>Titulo</h2>
+                    </header>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea culpa cum sed temporibus fuga ipsam nihil fugiat atque voluptate aperiam.
+                    </p>
+                    <footer>
+                        <section class="mainAuthor">
+                            <p>
+                                <i class="fas fa-user"></i> Autor
+                            </p>
+                        </section>
+                        <section class="mainDate">
+                            <p>
+                                <i class="fa-solid fa-calendar-days"></i> 29/08/2022
+                            </p>
+                        </section>
+                    </footer>
+                </article>
 
-            <article class="lastNews">
-                <img src="">
-                <header>
-                    <h2>Titulo</h2>
-                </header>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea culpa cum sed temporibus fuga ipsam nihil fugiat atque voluptate aperiam.
-                </p>
-                <footer>
-                    <section class="mainAuthor">
-                        <p>
-                            <i class="fas fa-user"></i> Autor
-                        </p>
-                    </section>
-                    <section class="mainDate">
-                        <p>
-                            <i class="fa-solid fa-calendar-days"></i> 29/08/2022
-                        </p>
-                    </section>
-                </footer>
-            </article>
-        </section>
-    </section>
-
-    <section class="container" id="pricing">
-        <h2 class="mainTitle">
-            <span>
-                Elegi el plan adecuado para vos
-            </span>
-        </h2>
-        <section class="items">
-            <section class="subscriptions">
-                <h2>Estandar</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsum at sapiente aut fugit sunt. Aliquam veritatis, ea odio incidunt et voluptates culpa magnam libero corrupti repellat quae fugit laudantium possimus illum vitae suscipit, commodi doloremque minus perferendis id eligendi.
-                </p>
-                <p class="mountSubscription">
-                    $0000000
-                </p>
-                <a href="" class="getSubscription"><i class="fa-solid fa-cart-shopping"></i></a>
-                <br>
-                <br>
+                <article class="lastNews">
+                    <img src="">
+                    <header>
+                        <h2>Titulo</h2>
+                    </header>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea culpa cum sed temporibus fuga ipsam nihil fugiat atque voluptate aperiam.
+                    </p>
+                    <footer>
+                        <section class="mainAuthor">
+                            <p>
+                                <i class="fas fa-user"></i> Autor
+                            </p>
+                        </section>
+                        <section class="mainDate">
+                            <p>
+                                <i class="fa-solid fa-calendar-days"></i> 29/08/2022
+                            </p>
+                        </section>
+                    </footer>
+                </article>
             </section>
-
-            <section class="subscriptions">
-                <h2>Premium</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsum at sapiente aut fugit sunt. Aliquam veritatis, ea odio incidunt et voluptates culpa magnam libero corrupti repellat quae fugit laudantium possimus illum vitae suscipit, commodi doloremque minus perferendis id eligendi.
-                </p>
-                <p class="mountSubscription">
-                    $0000000
-                </p>
-                <a href="" class="getSubscription"><i class="fa-solid fa-cart-shopping"></i></a>
-                <br>
-            </section>  
         </section>
-    </section>
 
-    <section class="container contactForm" id="contact">
-        <h2 class="mainTitle">
-            <span>
-                Ponete en Contacto
-            </span>
-        </h2>
-        <section class="items">
-            <section class="dataForm">
-                <form action="">
-                    <div class="formField">
-                        <label for="nombre">Nombre:</label>
-                        <input type="email" id="nombre">
-                    </div>
-                    <div class="formField">
-                        <label for="email">Email:</label>
-                        <input type="text" id="email">
-                    </div>
-                    <div class="formField">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea name="mensaje" id="mensaje" class="messageForm"></textarea>
-                    </div>
-                    <div class="formField">
-                        <input type="submit">
-                    </div>
-                </form>
+        <section class="container" id="pricing">
+            <h2 class="mainTitle">
+                <span>
+                    Elegi el plan adecuado para vos
+                </span>
+            </h2>
+            <section class="items">
+                <section class="subscriptions">
+                    <h2>Estandar</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsum at sapiente aut fugit sunt. Aliquam veritatis, ea odio incidunt et voluptates culpa magnam libero corrupti repellat quae fugit laudantium possimus illum vitae suscipit, commodi doloremque minus perferendis id eligendi.
+                    </p>
+                    <p class="mountSubscription">
+                        $0000000
+                    </p>
+                    <a href="" class="getSubscription"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <br>
+                    <br>
+                </section>
+
+                <section class="subscriptions">
+                    <h2>Premium</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsum at sapiente aut fugit sunt. Aliquam veritatis, ea odio incidunt et voluptates culpa magnam libero corrupti repellat quae fugit laudantium possimus illum vitae suscipit, commodi doloremque minus perferendis id eligendi.
+                    </p>
+                    <p class="mountSubscription">
+                        $0000000
+                    </p>
+                    <a href="" class="getSubscription"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <br>
+                </section>  
             </section>
-            <img src="/img/contactUs.svg">
         </section>
-    </section>
 
+        <section class="container contactForm" id="contact">
+            <h2 class="mainTitle">
+                <span>
+                    Ponete en Contacto
+                </span>
+            </h2>
+            <section class="items">
+                <section class="dataForm">
+                    <form action="">
+                        <div class="formField">
+                            <label for="nombre">Nombre:</label>
+                            <input type="email" id="nombre">
+                        </div>
+                        <div class="formField">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email">
+                        </div>
+                        <div class="formField">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea name="mensaje" id="mensaje" class="messageForm"></textarea>
+                        </div>
+                        <div class="formField">
+                            <input type="submit">
+                        </div>
+                    </form>
+                </section>
+                <img src="/img/contactUs.svg">
+            </section>
+        </section>
+    </main>
     <footer>
         <p>
             <a href="">Terminos y Condiciones</a>
