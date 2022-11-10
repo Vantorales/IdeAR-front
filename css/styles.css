@@ -5,7 +5,7 @@
     --main-bg2-color: #f0f1f3;
     --main-ad-color: #6899b6;
     --main-ad2-color: #395262;
-    --main-txt-color: #151c27;
+    --main-txt-color: #454546;
 }
 
 html{
@@ -34,16 +34,15 @@ nav span.menuIcon{
 }
 
 nav{
-    display: flex;
+    display: inline-block;
     background-color: var(--main-bg2-color);
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.05);
     position: fixed;
     width: 100%;
     z-index: 1;
     top: 0;
     left: 0;
     font-family: 'Roboto', sans-serif;
-    align-items: center;
-    justify-content: center;
 }
 
 nav ol{
@@ -59,6 +58,7 @@ nav ol li{
 nav a.logoNav{
     font-weight: 500;
     font-size: 1.4em;
+    display: inline-block;
 }
 
 nav ol.userOptions li{
@@ -84,6 +84,7 @@ nav a{
     -o-transition-delay: 0.2s; 
     transition: 0.2s all;   
     transition-delay: 0.2s; 
+    font-weight: bolder;
 }
 
 nav a:hover{
@@ -99,11 +100,16 @@ nav a i{
     color: var(--main-txt-color);
 }
 
-.fa-brain{
+.fa-brain, .fa-bars{
     background: -webkit-linear-gradient(#98c7d7,#636363);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.2em;
+    margin-right: 0.2em;
+}
+
+.fa-bars{
+    font-size: 1em;
 }
 
 header{
@@ -157,6 +163,163 @@ section.container {
     width: auto!important;
 }
 
+section.container.postView{
+    padding: 0!important;
+    background-color: #F0F1F3;
+}
+
+.navContent {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+section.mainPost {
+    background-color: var(--main-bg2-color);
+    padding: 3rem 3rem 0;
+    display: flex;
+}
+
+section.userProfile {
+    background: var(--main-bg-color);
+    width: 12rem;
+    height: 31rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+span.userName {
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: roboto;
+    font-weight: 600;
+}
+
+section.userProfile img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+section.dataProfile {
+    border-bottom: 0.1rem solid #707070;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+section.dataProfile:first-child {
+    margin-top: 0.6rem!important;
+}
+
+section.userProfile h4 {
+    font-size: 0.9rem;
+    margin: 0!important;
+}
+
+section.dataProfile span {
+    font-family: roboto;
+    font-size: 0.8rem;
+}
+
+section.postContent {
+    display: flex;
+    background: var(--main-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    flex-flow: column;
+    margin-left: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+section.postNav {
+    font-size: 0.9rem;
+}
+
+section.postNav span {
+    margin-right: 1rem;
+}
+
+section.postContent p{
+    font-size: 0.9rem;
+}
+
+section.ratePost {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    background: var(--main-bg-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+section.container.postView h3 {
+    background: var(--main-bg-color);
+    padding: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
+}
+
+section.featuredPosts {
+    display: flex;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    justify-content: center;
+}
+
+section.featuredPosts article {
+    background: var(--main-bg-color);
+    padding: 1rem;
+    height: 10rem;
+    width: 17rem;
+    margin-left: 1rem;
+    border-radius: 1rem;
+}
+
+section.featuredPosts article h4 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.featuredPosts article img {
+    margin-bottom: 1rem;
+}
+
+
+section.commentForm {
+    background: var(--main-bg-color);
+    padding: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 1rem;
+}
+
+form#postComment textarea[name=comment] {
+    width: 83.7rem;
+    padding: 1rem;
+    resize: none;
+    border: 0;
+    border-bottom: 0.1rem solid #707070;
+    font-family: roboto;
+}
+
+form#postComment .rateComment{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.rateComment {
+    background: var(--main-bg2-color);
+    padding: 0.4rem;
+}
+
 section.items{
     display: flex;
     flex-wrap: wrap; 
@@ -167,7 +330,6 @@ section.items{
 
 section.container h2.mainTitle{
     text-align: center;
-    font-weight: 300;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin-bottom: 2em;
@@ -232,6 +394,7 @@ p.mountSubscription{
 
 a.getSubscription{
     display: inline-block;
+    text-decoration: none;
 }
 
 .fa-lightbulb, .fa-wifi, .fa-handshake, .fa-building-user, .fa-cart-shopping {
@@ -244,6 +407,27 @@ a.getSubscription{
     border-radius: 100%;
     display: flex;
     justify-content: center;
+    -webkit-transition: 0.2s all;   
+    -webkit-transition-delay: 0.2s; 
+    -moz-transition: 0.2s all;   
+    -moz-transition-delay: 0.2s; 
+    -ms-transition: 0.2s all;   
+    -ms-transition-delay: 0.2s; 
+    -o-transition: 0.2s all;   
+    -o-transition-delay: 0.2s; 
+    transition: 0.2s all;   
+    transition-delay: 0.2s; 
+}
+
+.fa-lightbulb:hover, .fa-wifi:hover, .fa-handshake:hover, .fa-building-user:hover, .fa-cart-shopping:hover{
+    background-color: var(--main-bg-color);
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
+    color: var(--main-ad-color);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
 }
 
 article.lastNews footer{
@@ -272,7 +456,6 @@ section.mainDate {
     float: right;
 }
 
-
 section.dataForm{
     padding: 2em;
     border-radius: 2%;
@@ -285,7 +468,7 @@ section.dataForm{
 .formField label{
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: 500;
     font-size: 0.8em;
     letter-spacing: 0.2em;
 }
@@ -293,7 +476,6 @@ section.dataForm{
 .formField input, .formField textarea {
     width: 24em;
     min-height: 2em;
-    background-color: var(--main-bg2-color);
     font-family: 'Roboto', sans-serif;
     font-size: 0.8em;
     color: var(--main-txt-color);
@@ -360,15 +542,60 @@ footer svg{
     margin-bottom: -0.4em;;    
 }
 
+
+/* VISTA PUBLICACIONES */
+
+section.infoHeader.postView{
+    text-align: center;
+}
+
+section.infoHeader.postView h1{
+    font-size: 2em;    
+    border-bottom: 0.1em solid var(--main-ad2-color);
+    padding-bottom: 0.4em;
+    margin: 0;
+}
+
+section.infoHeader p.rateStars{
+    font-size: 1.8em;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 767px) {
 
     nav span.menuIcon{
-        display: block;
+        display: flex;
         cursor: pointer;
+        width: 1em;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8em;
     }
 
     nav{
+        display: flex;
+        align-items: center;
         flex-direction: column;
+        padding-bottom: 0.6em;
+    }
+
+    nav a.logoNav{
+        display: flex;
+        align-items: center;
     }
 
     nav ol{
@@ -376,16 +603,34 @@ footer svg{
     }
 
     nav ol.show{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ol li{
+        padding: 0.5em;
+
+    }
+
+    ol.userOptions.show{
+        display: inline-block;
+        margin-bottom: 1em;
     }
 
     .mainHeader{
-        margin-top: 10.5em;
+        margin-top: 6em;
     }
 
     .mainHeader img{
-        width: 28em;
-        height: 28em;
+        width: 26em;
+        height: 26em;
+        margin-right: 2em;
+    }
+
+    header.mainHeader .infoHeader{
+        margin-left: 2em;
     }
 
     .infoHeader h1{
@@ -397,7 +642,7 @@ footer svg{
     }
 
     section.container h2.mainTitle{
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
 
     section.roadMap, article.lastNews, section.subscriptions{
@@ -408,32 +653,29 @@ footer svg{
         width: 1em;
         height: 1em;
         font-size: 2em;
+        margin-top: 1em;
     }
 
-    section.roadMap h2, article.lastNews h2, section.subscriptions h2{
-        font-size: 2em;
+    section.roadMap h2, article.lastNews h2, section.subscriptions h2, article.lastNews h2{
+        font-size: 1.8em;
         text-transform: uppercase;
     }
 
-    section.roadMap p, article.lastNews p, section.subscriptions p{
-        font-size: 1.8em;
+    section.roadMap p, article.lastNews p, section.subscriptions p, article.lastNews p{
+        font-size: 1.4em;
     }
 
     article.lastNews{
+        width: 40em;
         display: block;
     }
     
     article.lastNews img {
-        width: 42em;
+        width: 40em;
         height: 20em;
     }
     
-    article.lastNews h2{
-        font-size: 3em;
-    }
-    
     article.lastNews p{
-        font-size: 2em;
         text-align:justify;
     }
 
@@ -444,7 +686,7 @@ footer svg{
 
     section.mainAuthor p, section.mainDate p{
         text-align: center;
-        font-size: 1.8em;
+        font-size: 1.4em;
         text-transform: uppercase;
     }
 
@@ -453,6 +695,8 @@ footer svg{
     }
 
     section.subscriptions p.mountSubscription{
-        font-size: 2.5em!important;
+        font-size: 2em!important;
     }
+
+
 }
