@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root{
     --main-bg-color: #fffefe;
     /*--main-bg2-color: #f0f1f3;*/
@@ -180,11 +182,22 @@ section.mainContainer {
     padding: 6em 2em 6em;
 }
 
+/* PUBLICACIONES */
+
 section.mainContainer.postView{
     padding: 0!important;
     background-color: #F0F1F3;
     margin-top: -4rem;
     max-width: 1920px;
+}
+
+h3.postView {
+    background: #fffefe;
+    padding: 1.4em;
+    margin-left: 2.6em;
+    margin-right: 2.6em;
+    border-radius: 1rem;
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
 }
 
 .navContent {
@@ -215,6 +228,7 @@ section.userProfile {
     border-radius: 1rem;
     display: flex;
     flex-flow: column;
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
 }
 
 span.userName {
@@ -261,6 +275,7 @@ section.postContent {
     margin-left: 1rem;
     font-family: 'Roboto', sans-serif;
     text-align: justify;
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
 }
 
 section.postNav {
@@ -294,6 +309,8 @@ section.featuredPosts {
     margin-left: 3rem;
     margin-right: 3rem;
     justify-content: center;
+    margin-bottom: 10em;
+    padding-bottom: 2em;
 }
 
 section.featuredPosts.profile{
@@ -308,6 +325,7 @@ section.featuredPosts.profile article{
 
 section.featuredPosts article {
     background: var(--main-bg-color);
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
     padding: 1rem;
     height: 10rem;
     width: 17rem;
@@ -368,16 +386,24 @@ section.commentData {
 
 section.commentData span, section.commentData button, section.postButtons button, .buttonProfile{
     padding: 0.6em 2em;
-    background: var(--main-bg2-color); 
+    background: #55b3d5; 
+    color: rgb(255, 255, 255);
     box-shadow: 0px 0px 1px 0px;
     border-radius: 20em;
     font-size: 0.9em;
-    font-weight: bolder;
+    font-weight: 300;
     display: inline-block;
+    font-family: "Poppins", sans-serif;
 }
 
 section.commentData button, section.postButtons button, .buttonProfile{
     border: 0!important;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+section.postButtons button:hover, input#postComment:hover{
+    background-color: #232434;
 }
 
 section.commentButtons {
@@ -403,7 +429,6 @@ section.commentContent section.content{
 
 article.commentPost {
     display: flex;
-    margin-top: 1rem;
     background: #fffefe;
     padding: 2rem;
     border-radius: 0.8rem;
@@ -411,6 +436,7 @@ article.commentPost {
     height: 20em;
     margin: 0 auto;
     margin-top: 1em;
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
 }
 
 form#postComment textarea[name=comment] {
@@ -430,7 +456,7 @@ form#postComment .rateComment{
 .rateComment {  
     background: var(--main-bg2-color);
     padding: 0.6em 2em;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 0.9em;
     border-radius: 2rem;
     margin-top: 1.2rem;
@@ -462,16 +488,18 @@ form#postComment .rateComment{
 
 
 input#postComment{
-    background: #f0f1f3;
+    background: #55b3d5;
+    color: #fff;
     border: 0;
     padding: 0.6em 2em;
-    font-family: 'Roboto';
+    font-family: "Poppins", sans-serif;
     font-weight: bolder;
     border-radius: 2rem;
     font-size: 0.9em;
     display: inline-block;
     float: right;
     margin-top: 1.2rem;
+    transition: all 0.3s ease 0s;
 }
 
 section.commentContent {
@@ -630,9 +658,9 @@ article.lastNews header{
 }
 
 article.lastNews header h3{
-    font-size: 1.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.3em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
 
 section.roadMap p, article.lastNews p, section.aboutUs p{
@@ -815,7 +843,7 @@ footer.postFooter{
 footer a{
     display: inline-block;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 1em;
     font-weight: bolder;
     color: #1a2932;
@@ -852,11 +880,8 @@ footer svg {
     min-height: 10em;
 }
 
-section.infoF.gratitude p, section.infoF.termsPrivacy p, section.infoF.utilityInfo p{ 
-    width: 20em;
-    font-family: "Poppins", sans-serif;
-    text-align: justify!important;
-    line-height: 1.4em;
+.infoF img{
+    width: 400px;
 }
 
 .arrowUp {
@@ -917,6 +942,10 @@ section.userProfile.view{
 
 section.mainContainer.postView.editProfile{
     padding-bottom: 3em!important;
+}
+
+section.container.postView.editProfile {
+    max-width: 1920px!important;
 }
 
 .mainContainer-xl.px-4.mt-4 {
@@ -1008,7 +1037,21 @@ section.infoHeader p.rateStars{
 
 /* LOGIN */
 
+.col-md-6.col-lg-7.d-flex.align-items-center {
+    max-width: 35em;
+}
 
+.img-fluid.login{
+    margin-top: 3.4em;
+}
+
+.img-fluid.register{
+    margin-top: 11em;
+}
+
+p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
+    font-family: "Poppins", sans-serif;
+}
 
 
 
@@ -1211,8 +1254,9 @@ section.infoHeader p.rateStars{
 }
 
 .btn-contact-bg {
-    border-radius: 30px;
+    border-radius: 15px;
     color: #fff;
+    border: 0;
     outline: medium none !important;
     padding: 15px 27px;
     text-transform: capitalize;
@@ -1277,6 +1321,8 @@ section.infoHeader p.rateStars{
 .single_address p {
     overflow: hidden;
     margin-top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
 }
 
 .section-title h1 {

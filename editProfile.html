@@ -18,17 +18,18 @@
         <a href="index.html" class="logoNav"><i class='fas fa-brain'></i> IdeAR</a>
         <span class="menuIcon"><i class="fa-solid fa-bars"></i></span>
         <ol class="navOptions">
-            <li><a href="#roadMap">RoadMap</a></li>
-            <li><a href="#destacado">Destacado</a></li>
-            <li><a href="#pricing">Suscripciones</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#">Inicio</a></li>
+        </ol>
+        <ol class="userOptions">
+            <li><a href="register.html"><i class="fa-solid fa-user"></i> Perfil</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
         </ol>
     </nav>
     <header class="mainHeader">
         <div class="infoHeader">
-            <h1>Conectando ideas, materializando sueños</h1>
+            <h1 id="#">Conectando ideas, materializando sueños</h1>
         </div>
-        <img src="/img/main.svg">
+        <img src="/img/mainImage.svg">
     </header>
     <main>
         <section class="container postView editProfile">
@@ -36,7 +37,7 @@
                 Editando el perfil de "Nombre de Usuario"
             </div>
 
-            <div class="container-xl px-4 mt-4">
+            <div class="container-xl px-4 mt-4" style="margin-top: 10em!important; margin-bottom: 10em!important;">
                 <div class="row">
                     <div class="col-xl-4">
                         <!-- Profile picture card-->
@@ -127,10 +128,29 @@
 
         </section>
     </main>
-    <footer class="postFooter">
+    <footer style="margin-top: -4rem">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f6fbff" fill-opacity="1" d="M0,192L30,176C60,160,120,128,180,138.7C240,149,300,203,360,213.3C420,224,480,192,540,176C600,160,660,160,720,149.3C780,139,840,117,900,133.3C960,149,1020,203,1080,218.7C1140,235,1200,213,1260,186.7C1320,160,1380,128,1410,112L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+        </svg>
+  
+        <a href="#" class="mouseBack">
+            <div class="arrowUp">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+        </a>
+
+        <div class="infoFooter">
+            <section class="infoF">
+                <img src="img/footer.svg">
+            </section>
+        </div>
         <p>
             <a href="">Terminos y Condiciones</a>
+            <br>
             <a href="">Politica de Privacidad</a>
+        </p>
+        <p class="copyright">
+            Copyright © 2022 All rights reserved
         </p>
     </footer>
 </body>
