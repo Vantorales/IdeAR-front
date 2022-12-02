@@ -203,8 +203,8 @@ h3.postView {
 .navContent {
     background-color: #FFFFFF;
     padding: 1rem;
-    font-family: 'Roboto', sans-serif;;
-    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
     font-size: 0.9rem;
 }
 
@@ -946,6 +946,15 @@ section.mainContainer.postView.editProfile{
 
 section.container.postView.editProfile {
     max-width: 1920px!important;
+}
+
+.card-header {
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder!important;
+}
+
+.col-md-6{
+    font-family: "Poppins", sans-serif;
 }
 
 .mainContainer-xl.px-4.mt-4 {
