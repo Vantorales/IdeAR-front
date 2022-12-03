@@ -75,32 +75,29 @@ nav a.logoNav{
 nav ol.userOptions li{
     font-weight: 500;
     font-size: 0.9em!important;
-    background-color: var(--main-bg-color);
+    background-color: #55b3d5;
     padding: 0.5em;
-    border-radius: 5%;
+    border-radius: 20em;
+    transition: all 0.3s ease 0s;
+}
+
+nav ol.userOptions li:hover{
+    background-color: #232434;
+}
+
+nav ol.userOptions li a, nav ol.userOptions li i.fa-solid.fa-user, nav ol.userOptions li i.fa-solid.fa-right-to-bracket, nav ol.userOptions li i.fa-solid.fa-user-plus{
+    color: #fff;
 }
 
 nav a{
-    color: var(--main-txt-color);
+    color: #232434;
     text-decoration: none;
     margin:1em;
     font-size: 1em;
-    -webkit-transition: 0.2s all;   
-    -webkit-transition-delay: 0.2s; 
-    transition: 0.2s all;   
-    transition-delay: 0.2s; 
     font-weight: 400;
     font-family: "Poppins", sans-serif;
 }
 
-nav a:hover{
-    color: var(--main-ad-color);
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-}
 
 nav a i{
     color: var(--main-txt-color);
@@ -315,6 +312,7 @@ section.featuredPosts {
 
 section.featuredPosts.profile{
     background-color: var(--main-bg-color);
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
     padding: 2rem;
     border-radius: 1em;
 }
@@ -515,6 +513,7 @@ section.items{
     justify-content: center;
     column-gap: 1em;
     row-gap: 1em;
+    align-items: center;
 }
 
 section.mainContainer h2.mainTitle{
@@ -541,6 +540,38 @@ section.mainContainer h2.mainTitle{
     line-height: 2em;
 }
 
+
+/* SOBRE NOSOTROS */
+
+.aboutImg{
+    width: 30em;
+    position: relative;
+    margin-top: 0;
+}
+
+.aboutTeam h3.title{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.aboutTeam:first-child{
+    width: 34em;
+}
+
+.aboutTeam p{
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+}
+
+a.btn-contact-bg{
+    position: relative;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+
+/*ROADMAP*/
+
 section.roadMap h3{
     font-size: 24px;
     font-weight: 600;
@@ -561,7 +592,6 @@ section.roadMap h3:before{
     width: 50px;
     background: hsl(209, 100%, 68%);
 }
-
 
 h2#roadMap span, h2#destacado span {
     border-bottom: 0.4em solid #6899b652;
@@ -625,7 +655,7 @@ section.aboutUs img{
     border-radius: 100%;
 }
 
-section.mainContainer.news, section.mainContainer.about, section.mainContainer.contactForm{
+section.mainContainer#roadMap, section.mainContainer.about, section.mainContainer#contact{
     background-color: var(--main-bg-color);
 }
 
@@ -697,7 +727,7 @@ section.aboutContact a{
     text-decoration: none;
 }
 
-.fa-github, .fa-linkedin-in {
+.fa-github.about, .fa-linkedin-in {
     width: 0.7em;
     height: 0.7em;
     background-color: #55b3d5;
@@ -953,6 +983,11 @@ section.container.postView.editProfile {
     font-weight: bolder!important;
 }
 
+.card{
+    border-radius: 1rem;
+    border: 0!important;
+}
+
 .col-md-6{
     font-family: "Poppins", sans-serif;
 }
@@ -987,7 +1022,7 @@ section.container.postView.editProfile {
 }
 .form-control, .dataTable-input {
     display: block;
-    width: 100%;
+    width: 98%;
     padding: 0.875rem 1.125rem;
     font-size: 0.875rem;
     font-weight: 400;
@@ -1263,7 +1298,7 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
 }
 
 .btn-contact-bg {
-    border-radius: 15px;
+    border-radius: 20em;
     color: #fff;
     border: 0;
     outline: medium none !important;
@@ -1353,4 +1388,70 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
 }
 .text-center {
     text-align: center!important;
+}
+
+
+/* PROYECTOS VISTA*/
+
+section.container.postView {
+    padding-bottom: 4em;
+}
+
+section.projectOptions {
+    margin-top: 4em;
+    margin-left: 2.6em;
+    margin-bottom: 4em;
+}
+
+article.proInd {
+    width: 26em;
+    background: white;
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 1rem;
+}
+
+article.proInd h1{
+    margin: 0;
+    font-size: 1.2em;
+    margin-bottom: 0.6em;
+}
+
+.projectData{
+    font-family: "Poppins", sans-serif;
+    border-top: 0.1rem solid #a8a7a7;
+    padding-top: 1em;
+    font-size: 0.8em;
+}
+
+/* PUBLICAR PROYECTO */
+
+section.bodyPost {
+    background-color: var(--main-bg-color);
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
+    margin-left: 3em;
+    margin-right: 3em;
+    padding: 4em 2em;
+    border-radius: 1em;
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+section.bodyPost label {
+    font-size: 1em;
+}
+
+textarea#contentPost, input#titlePost {
+    margin-right: 2em;
+}
+
+
+span.h1.fw-bold.mb-0 h2{
+    font-weight: 700;
+}
+
+.form-outline.mb-4 label {
+    font-size: 0.9em;
 }
