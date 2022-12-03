@@ -1448,10 +1448,10 @@ textarea#contentPost, input#titlePost {
 }
 
 
+span.h1.fw-bold.mb-0 h2{
+    font-weight: 700;
+}
 
-
-
-
-
-
-
+.form-outline.mb-4 label {
+    font-size: 0.9em;
+}
