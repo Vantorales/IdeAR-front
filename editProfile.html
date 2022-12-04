@@ -63,11 +63,11 @@
                                     <div class="row gx-3 mb-3">
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputUsername">Nombre de usuario</label>
-                                            <input class="form-control" id="inputUsername" type="text" placeholder="Ingresa tu nombre de usuario">
+                                            <input class="form-control" id="nickname" type="text" placeholder="Ingresa tu nombre de usuario">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputEmailAddress">Correo electrónico</label>
-                                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Ingresa tu correo electrónico">
+                                            <input class="form-control" id="email" type="email" placeholder="Ingresa tu correo electrónico">
                                         </div>
                                     </div>
                                     <!-- Form Row-->
@@ -75,12 +75,12 @@
                                         <!-- Form Group (first name)-->
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputFirstName">Nombre</label>
-                                            <input class="form-control" id="inputFirstName" type="text" placeholder="Ingresa tu nombre">
+                                            <input class="form-control" id="nombre" type="text" placeholder="Ingresa tu nombre">
                                         </div>
                                         <!-- Form Group (last name)-->
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputLastName">Apellido</label>
-                                            <input class="form-control" id="inputLastName" type="text" placeholder="Ingresa tu apellido">
+                                            <input class="form-control" id="apellido" type="text" placeholder="Ingresa tu apellido">
                                         </div>
                                     </div>
                                     <!-- Form Row        -->
@@ -88,12 +88,12 @@
                                         <!-- Form Interest-->
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputInterest">Área de interés</label>
-                                            <input class="form-control" id="inputInterest" type="text" placeholder="Ingresa tu área de interés">
+                                            <input class="form-control" id="areaInteres" type="text" placeholder="Ingresa tu área de interés">
                                         </div>
                                         <!-- Form Group (location)-->
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputLocation">Ubicación</label>
-                                            <input class="form-control" id="inputLocation" type="text" placeholder="Ingresa tu ubicación">
+                                            <input class="form-control" id="ubicacion" type="text" placeholder="Ingresa tu ubicación">
                                         </div>
                                     </div>
                                     <!-- Form Row-->
@@ -101,7 +101,7 @@
                                         <!-- Form Group (birthday)-->
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputBirthday">Fecha de nacimiento</label>
-                                            <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Ingresa tu fecha de nacimiento">
+                                            <input class="form-control" id="fechaNacimiento" type="text" name="birthday" placeholder="Ingresa tu fecha de nacimiento">
                                         </div>
                                     </div>
                                     <!-- Form Row-->
@@ -109,16 +109,16 @@
                                         <!-- Form Group (Github)-->
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputGithub">Github</label>
-                                            <input class="form-control" id="inputGithub" type="url" name="github" placeholder="Ingresa tu usuario de Github">
+                                            <input class="form-control" id="github" type="url" name="github" placeholder="Ingresa tu usuario de Github">
                                         </div>
                                         <!-- Form Group (Webpage)-->
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputWebpage">Página web</label>
-                                            <input class="form-control" id="inputWebpage" type="url" name="webpage" placeholder="Ingresa tu página web">
+                                            <input class="form-control" id="paginaWeb" type="url" name="webpage" placeholder="Ingresa tu página web">
                                         </div>
                                     </div>
                                     <!-- Save changes button-->
-                                    <button class="buttonProfile" type="button">Guardar cambios</button>
+                                    <button class="buttonProfile" type="button" onclick="editarPerfil()">Guardar cambios</button>
                                 </form>
                             </div>
                         </div>
@@ -153,5 +153,6 @@
             Copyright © 2022 All rights reserved
         </p>
     </footer>
+    <script src="/js/editarPerfil.js"></script>
 </body>
 </html>

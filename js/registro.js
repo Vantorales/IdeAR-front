@@ -79,7 +79,7 @@ const registro = () => {
           };
     
           localStorage.setItem("UserInit",JSON.stringify(userInit));
-          location.href = 'profile.html';
+          location.href = 'home.html';
           
     
         }else{
