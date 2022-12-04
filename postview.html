@@ -165,24 +165,24 @@
       <section class="modal">
         <div class="modal__container">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Editar publicación</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Editar publicación</h1>                      
                     </div>
                     <div class="modal-body">
                       <form>
                         <div class="mb-3">
                           <label for="recipient-name" class="col-form-label">Titulo:</label>
-                          <input type="text" class="form-control" id="recipient-name">
+                          <input type="text" class="form-control" id="editTitulo">
                         </div>
                         <div class="mb-3">
                           <label for="message-text" class="col-form-label">Contenido:</label>
-                          <textarea class="form-control" id="message-text"></textarea>
+                          <textarea class="form-control" id="editContenido"></textarea>
                         </div>
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary">Enviar</button>
+                        <a href="postview.html" class="modal__close">Cerrar</a> 
+                        <a href="#" class="modal__close" onclick="editarPublicacion()">Guardar cambios</a> 
+                      <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
                     </div>
                   </div>
             <!-- <h2 class="modal__title">¡Bienvenido al sitio!</h2>
