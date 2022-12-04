@@ -207,7 +207,7 @@ h3.postView {
 
 section.mainPost {
     background-color: var(--main-bg2-color);
-    padding: 3rem 3rem 0;
+    padding: 6rem 8rem 4rem;
     display: flex;
     margin: 0 auto;
 }
@@ -264,6 +264,7 @@ section.dataProfile span {
 }
 
 section.postContent {
+    width: 83em;
     display: flex;
     background: var(--main-bg-color);
     padding: 2rem;
@@ -410,7 +411,7 @@ section.commentButtons {
 }
 
 section.commentContent section.content{
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: justify;
 }
 
@@ -430,8 +431,7 @@ article.commentPost {
     background: #fffefe;
     padding: 2rem;
     border-radius: 0.8rem;
-    width: 100em;
-    height: 20em;
+    width: 93em;
     margin: 0 auto;
     margin-top: 1em;
     box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
@@ -1195,6 +1195,12 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
         padding-top: 7em!important;
     }
 
+}
+
+@media only screen and (max-width: 720px) {
+    .infoHeader{
+        margin-left: 2em;
+    }
 }
 
 
