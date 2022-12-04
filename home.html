@@ -31,9 +31,13 @@
 
         section.principalPost {
             background-color: var(--main-bg2-color);
-            padding: 5rem 15rem 0;
+            padding: 2rem 15rem 0;
             display: flex;
             margin: 0 auto;
+        }
+
+        section.principalPost:first-child{
+            padding-top: 5rem;
         }
     </style>
 </head>
@@ -52,8 +56,28 @@
             <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
         </ol>
     </nav>
-    
+    <header class="mainHeader">
+        <div class="infoHeader">
+            <h1 id="#">Conectando ideas, materializando sueños</h1>
+        </div>
+        <img src="/img/mainImage.svg">
+    </header>
     <main>
+        <script>
+        function ellipsis_box(elemento, max_chars){
+            limite_text = $(elemento).text();
+            if (limite_text.length > max_chars)
+            {
+            limite = limite_text.substr(0, max_chars)+" ...";
+            $(elemento).text(limite);
+            }
+            }
+            
+            $(function()
+            {
+            ellipsis_box("p.limitado", 1000);
+            });
+        </script>
         <h1 class="navContent">Publicaciones recientes</h1>
 
         <section class="container postView">
@@ -71,29 +95,16 @@
                         <span>por <b>Nombre de Usuario</b></span>
                         <span>Fecha</span>
                     </section>
-                    <p>
-                        
+                    <p class="limitado">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
                     </p>
-                    <div class="rateComment">
-                        <span>Puntuar publicación:</span>
-                        <div class="starsRate">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1">
-                            <label for="radio5">★</label>
-                        </div>
+                    <div class="rateComment reading">
+                        <span>Continuar leyendo</span>
                     </div>
                 </section>
             </section>
-        </section>
-
-        <section class="container postView">
 
             <section class="principalPost">
                 <section class="profileComment">
@@ -108,29 +119,16 @@
                         <span>por <b>Nombre de Usuario</b></span>
                         <span>Fecha</span>
                     </section>
-                    <p>
-                        
+                    <p class="limitado">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
                     </p>
-                    <div class="rateComment">
-                        <span>Puntuar publicación:</span>
-                        <div class="starsRate">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1">
-                            <label for="radio5">★</label>
-                        </div>
+                    <div class="rateComment reading">
+                        <span>Continuar leyendo</span>
                     </div>
                 </section>
             </section>
-        </section>
-
-        <section class="container postView">
 
             <section class="principalPost">
                 <section class="profileComment">
@@ -145,29 +143,16 @@
                         <span>por <b>Nombre de Usuario</b></span>
                         <span>Fecha</span>
                     </section>
-                    <p>
-                        
+                    <p class="limitado">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
                     </p>
-                    <div class="rateComment">
-                        <span>Puntuar publicación:</span>
-                        <div class="starsRate">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1">
-                            <label for="radio5">★</label>
-                        </div>
+                    <div class="rateComment reading">
+                        <span>Continuar leyendo</span>
                     </div>
                 </section>
             </section>
-        </section>
-
-        <section class="container postView">
 
             <section class="principalPost">
                 <section class="profileComment">
@@ -182,100 +167,18 @@
                         <span>por <b>Nombre de Usuario</b></span>
                         <span>Fecha</span>
                     </section>
-                    <p>
-                        
+                    <p class="limitado">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
                     </p>
-                    <div class="rateComment">
-                        <span>Puntuar publicación:</span>
-                        <div class="starsRate">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1">
-                            <label for="radio5">★</label>
-                        </div>
+                    <div class="rateComment reading">
+                        <span>Continuar leyendo</span>
                     </div>
                 </section>
             </section>
-        </section>
 
-        <section class="container postView">
 
-            <section class="principalPost">
-                <section class="profileComment">
-                    <span class="info Username">Nombre de Usuario</span>
-                    <img src="https://via.placeholder.com/150x150" alt="">
-                    <span class="info Interest">Area de interés</span>
-                </section>
-
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p>
-                        
-                    </p>
-                    <div class="rateComment">
-                        <span>Puntuar publicación:</span>
-                        <div class="starsRate">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1">
-                            <label for="radio5">★</label>
-                        </div>
-                    </div>
-                </section>
-            </section>
-        </section>
-
-        <section class="container postView">
-
-            <section class="principalPost">
-                <section class="profileComment">
-                    <span class="info Username">Nombre de Usuario</span>
-                    <img src="https://via.placeholder.com/150x150" alt="">
-                    <span class="info Interest">Area de interés</span>
-                </section>
-
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p>
-                        
-                    </p>
-                    <div class="rateComment">
-                        <span>Puntuar publicación:</span>
-                        <div class="starsRate">
-                            <input id="radio1" type="radio" name="estrellas" value="5">
-                            <label for="radio1">★</label>
-                            <input id="radio2" type="radio" name="estrellas" value="4">
-                            <label for="radio2">★</label>
-                            <input id="radio3" type="radio" name="estrellas" value="3">
-                            <label for="radio3">★</label>
-                            <input id="radio4" type="radio" name="estrellas" value="2">
-                            <label for="radio4">★</label>
-                            <input id="radio5" type="radio" name="estrellas" value="1">
-                            <label for="radio5">★</label>
-                        </div>
-                    </div>
-                </section>
-            </section>
         </section>
 
     </main>          
