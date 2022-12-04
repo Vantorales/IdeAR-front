@@ -12,7 +12,7 @@ let paginaWeb;
 document.addEventListener('DOMContentLoaded', async ()=> {
 
   const data = {
-    nickname: "ToralesVanesa"
+    nickname: "VanesaT"
   }
 
   const url = "http://localhost:8080/api/obtenerUsuario";

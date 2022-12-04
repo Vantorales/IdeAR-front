@@ -15,14 +15,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const titulo = document.querySelector("#tituloPublicacion");
     const contenido = document.querySelector("#contenido");
-    const nickname = document.querySelector("#nickname");
+    const nickname = document.querySelector("#nicknamePublicacion");
     const fechaCreacion =  document.querySelector("#fechaCreacion");
 
 
     const editTitulo = document.querySelector("#editTitulo");
     const editContenido = document.querySelector("#editContenido");
 
-    console.log(dataPublicacion);
 
     titulo.innerText = dataPublicacion.publicacion[0].titulo ? dataPublicacion.publicacion[0].titulo: "";
     contenido.innerText = dataPublicacion.publicacion[0].contenido ? dataPublicacion.publicacion[0].contenido: "";
@@ -33,6 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     editContenido.value = dataPublicacion.publicacion[0].contenido ? dataPublicacion.publicacion[0].contenido: "";
 
     datosUsuario();
+    cargarComentarios();
 
 });
 
@@ -107,18 +107,26 @@ closeModalEliminar.addEventListener('click', (e)=>{
 const datosUsuario = async() => {
 
     const data = {
-        nickname: "ToralesVanesa"
+        nickname: "VanesaT"
       }
     
       const url = "http://localhost:8080/api/obtenerUsuario";
       
        dataUser = await sendData(url, data, "POST");
+      console.log(dataUser);
 
+       //OBTENCION DE TAGS
       const nickname = document.querySelector("#nickname");
       const ubicacion = document.querySelector("#ubicacion");
       const areaInteres = document.querySelector("#areaInteres");
       const cantidadPublicaciones = document.querySelector("#publicaciones");
       const reputacion = document.querySelector("#reputacion");
+
+nickname.innerHTML = dataUser.usuario[0].nickname;
+ubicacion.innerHTML = dataUser.usuario[0].ubicacion;
+areaInteres.innerHTML = dataUser.usuario[0].areaInteres;
+cantidadPublicaciones.innerHTML = dataUser.usuario[0].publicacion;
+reputacion.innerHTML = dataUser.usuario[0].reputacion;
       
 
 

@@ -58,9 +58,6 @@ const registro = () => {
         const responseJSON = await response.json();
         redirectHome(responseJSON);
 
-
-        console.log(responseJSON);
-
     } catch(error){
         console.log(error);
     }}
