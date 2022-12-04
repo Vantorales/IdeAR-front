@@ -655,8 +655,12 @@ section.aboutUs img{
     border-radius: 100%;
 }
 
-section.mainContainer#roadMap, section.mainContainer.about, section.mainContainer#contact{
+section.mainContainer#roadMap, section.mainContainer.about, section#team{
     background-color: var(--main-bg-color);
+}
+
+section#formarParte{
+    background: #f6fbff;
 }
 
 article.lastNews{
@@ -1171,8 +1175,14 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
         font-size: 2.2em;
     }
 
+    section.roadMap{
+        padding: 6em 2em!important;
+    }
+
     section.roadMap, article.lastNews, section.aboutUs{
-        width: 50em;
+        width: 20em!important;
+        height: 30em;
+        margin-top: 0em!important;
     }
 
     section.roadMap h2, article.lastNews h2, article.lastNews h2, section.aboutUs h2{
