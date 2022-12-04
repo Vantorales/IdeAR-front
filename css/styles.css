@@ -624,6 +624,7 @@ section.roadMap, article.lastNews, section.aboutUs{
 
 section.roadMap{
     width: 26em;
+    height: 26em;
     font-size: 0.8em;
     transition: all 0.2s ease;
     padding: 10em 1em;
