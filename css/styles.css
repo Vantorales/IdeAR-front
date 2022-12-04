@@ -208,7 +208,7 @@ h3.postView {
 
 section.mainPost {
     background-color: var(--main-bg2-color);
-    padding: 6rem 8rem 4rem;
+    padding: 4rem 8rem 4rem;
     display: flex;
     margin: 0 auto;
 }
@@ -345,7 +345,9 @@ section.featuredPosts article img {
 
 section.commentForm {
     width: 100em;
+    min-height: 14em;
     background: var(--main-bg-color);
+    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
     padding: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -355,7 +357,6 @@ section.commentForm {
 
 section.profileComment {
     background: #fffefe;
-    box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -405,7 +406,7 @@ section.commentData button, section.postButtons button, .buttonProfile{
     transition: all 0.3s ease 0s;
 }
 
-section.postButtons button:hover, input#postComment:hover{
+section.postButtons button:hover, input#postComment:hover, button.buttonProfile:hover{
     background-color: #232434;
 }
 
@@ -443,6 +444,7 @@ article.commentPost {
 
 form#postComment textarea[name=comment] {
     width: 98rem;
+    height: 10em;
     padding: 1rem;
     resize: none;
     border: 0;
@@ -506,7 +508,6 @@ input#postComment{
     border: 0;
     padding: 0.6em 2em;
     font-family: "Poppins", sans-serif;
-    font-weight: bolder;
     border-radius: 2rem;
     font-size: 0.9em;
     display: inline-block;
@@ -516,6 +517,7 @@ input#postComment{
 }
 
 section.commentContent {
+    width: 76em;
     padding: 2rem;
     border-left: 0.1rem solid #a8a7a7;
     text-align: justify;
@@ -970,6 +972,10 @@ section.profileView h3{
 
 /* EDITAR PERFIL */
 
+.card-header{
+    background-color: rgb(255 255 255)!important;
+}
+
 section.mainPost.editProfile {
     background: #fffefe;
     width: 70em;
@@ -1114,113 +1120,7 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
     font-family: "Poppins", sans-serif;
 }
 
-
-@media only screen and (max-width: 375px) {
-    body{
-        width: 100%;
-    }
-
-    header.mainHeader {
-        width: 100%;
-    }
-
-    header.mainHeader .infoHeader{
-        margin: 0!important;
-    }
-
-    
-    header.mainHeader h1{
-        font-size: 3em;
-        line-height: 100%;
-    }
-
-    header.mainHeader img{
-        display: none;
-    }
-
-    section.mainContainer{
-        width: 152%;
-    }
-
-    .aboutTeam p, .titleContainer span{
-        font-size: 1.4em;
-    }
-
-    .aboutImg{
-        width: 36em!important;
-        margin-bottom: -7em;
-        margin-top: -2em;
-    }
-
-    section.roadMap{
-        width: 40em!important;
-        height: auto!important;
-    }
-
-    section.roadMap p{
-        font-size: 1.8em!important;
-    }
-
-    section.roadMap h3{
-        font-size: 2.6em!important;
-    }
-
-    section.roadMap img {
-        width: 36em!important;
-        height: auto;
-    }
-
-    section.aboutTeam.newProject {
-        width: auto!important;
-    }
-
-    section.aboutUs {
-        width: 30em!important;
-    }
-
-    section.aboutUs h3 {
-        font-size: 1.6em;
-    }
-
-    section.aboutUs p {
-        font-size: 1.3em;
-    }
-
-    i.fa-brands.fa-github.about, i.fa-brands.fa-linkedin-in{
-        font-size: 1.6em;
-    }
-
-    .col-lg-7 {
-        width: 30em;
-        margin-left: -5em;
-        margin-top: 0!important;
-    }
-
-    .col-lg-5 {
-        margin-left: 0!important;
-        margin-top: 0!important;
-    }
-
-    .single_address {
-        display: inline-block;
-        width: 17em;
-    }
-
-    footer{
-        width: 170%;
-        padding-top: 7em!important;
-    }
-
-}
-
-@media only screen and (max-width: 720px) {
-    .infoHeader{
-        margin-left: 2em;
-    }
-}
-
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
     nav span.menuIcon{
         display: flex;
@@ -1241,6 +1141,11 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
     nav a.logoNav{
         display: flex;
         align-items: center;
+        font-size: 2.5em;
+    }
+
+    nav span.menuIcon{
+        font-size: 2.5em;
     }
 
     nav ol{
@@ -1248,6 +1153,7 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
     }
 
     nav ol.show{
+        font-size: 2em;
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -1265,29 +1171,37 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
     }
 
     .mainHeader{
-        margin-top: 6em;
-    }
-
-    .mainHeader img{
-        width: 26em;
-        height: 26em;
-        margin-right: 2em;
+        margin-top: 12em;
     }
 
     .infoHeader{
-        margin-left: 4em;
+        margin-right: 4em;
     }
 
     .infoHeader h1{
-        font-size: 2.5em;
+        font-size: 4em;
+        line-height: 100%;
     }
 
     .infoHeader a{
         width: 8em;
+        font-size: 1.8em;
+    }
+
+    section.mainContainer{
+        width: 215%;
     }
 
     section.mainContainer h2.mainTitle{
-        font-size: 2.6em;
+        font-size: 3em;
+    }
+
+    section.aboutTeam{
+        width: 40em!important;
+    }
+
+    .aboutTeam p{
+        font-size: 2em;
     }
 
     section.roadMap{
@@ -1299,10 +1213,19 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
         font-style: normal;
     }
 
-    section.roadMap, article.lastNews{
-        width: 20em;
-        height: 30em;
+    section.roadMap{
+        width: 50em;
+        min-height: 60em;
         margin-top: 0em!important;
+    }
+
+    section.roadMap h3{
+        font-size: 3em;
+    }
+
+    section.roadMap img{
+        width: 30em;
+        height: auto;
     }
 
     section.aboutTeam.comunity{
@@ -1314,15 +1237,28 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
     }
 
     .aboutImg{
-        width: 24em;
+        width: 50em;
     }
 
     section.aboutUs{
-        width: 18em;
+        width: 40em;
+    }
+
+    section.aboutUs h3 {
+        font-size: 2.2em;
     }
 
     section.aboutUs p {
-        font-size: 1em;
+        font-size: 1.8em;
+    }
+
+    section.aboutUs img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .fa-github.about, .fa-linkedin-in{
+        font-size: 2em;
     }
 
     section.roadMap h2, article.lastNews h2, article.lastNews h2, section.aboutUs h2{
@@ -1330,7 +1266,16 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
         text-transform: uppercase;
     }
 
-    section.roadMap p, article.lastNews p, section.aboutUs p, article.lastNews p{
+    .titleContainer span{
+        font-size: 2em;
+    }
+
+    section.roadMap p{     
+        font-size: 2.5em;
+        text-align: justify;
+    }
+    
+    article.lastNews p, article.lastNews p{
         font-size: 1.2em;
     }
 
@@ -1375,10 +1320,145 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
         display: none;
     }
 
+    section.items .col-lg-5 {
+        margin-left: 6em;
+        margin-top: 0em;
+        font-size: 2em;
+    }
+
+    .single_address i.fa {
+        font-size: 2em;
+        padding: 0.4em;
+        border-radius: 100%;
+    }
+
+    section.items .col-lg-5 h4{
+        font-size: 1em;
+    }
+
+    .col-lg-7 {
+        width: 40em;
+    }
+
+
+    .form-group.col-md-6 input.form-control,.form-group.col-md-6 textarea.form-control {
+        font-size: 1.8em;
+        height: 70px;
+        padding: 1em;
+    }
+
+    .btn-contact-bg{
+        font-size: 2em;
+    }
+
+
     footer {
+        width: 223%;
         padding-top: 9em;
     }
 
+    footer a.mouseBack {
+        width: 4em;
+        height: 4em;
+        padding: 2em;
+    }
+
+    footer p {
+        font-size: 1.8em;
+    }
+
+    i.fa-solid.fa-arrow-up{
+        font-size: 2.2em;
+    }
+
+    .infoF img {
+        width: 40em;
+    }
+
+
+    /* PUBLICACIONES */
+
+    header.mainHeader {
+        width: 190%;
+    }
+
+    .navContent{
+        width: 213%;
+        font-size: 1.2rem;
+    }
+
+    h3.postView{
+        font-size: 1.6em;
+    }
+
+    section.userProfile {
+        width: 24em;
+    }
+
+    section.userProfile span.userName {
+        font-size: 1.4em;
+    }
+
+    section.container.postView{
+        width: 220%;
+    }
+
+    section.userProfile h4 {
+        font-size: 1.1rem;
+    }
+
+    section.commentForm {
+        width: 85em;
+        min-height: 19em;
+    }
+
+    section.postNav span {
+        font-size: 1.5em;
+    }
+
+    h2#tituloPublicacion {
+        font-size: 2em;
+    }
+
+    .mainHeader img {
+        width: 44em;
+    }
+
+    p#contenido, section.commentContent section.content{
+        font-size: 1.3em;
+    }
+
+    article.commentPost {
+        width: 85em;
+    }
+
+    form#postComment textarea[name=comment] {
+        width: 83rem;
+        font-size: 1.2em;
+    }
+
+    input#postComment,section.postButtons button, section.commentData span, section.commentData button{
+        font-size: 1.3em;
+    }
+
+    section.profileComment {
+        width: 20em;
+    }
+
+    span.info.Username {
+        text-align: center;
+        font-size: 1.4em;
+    }
+
+    section.profileComment img {
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    span.info.Interest {
+        font-size: 1.3em!important;
+    }
 
 }
 
@@ -1555,6 +1635,7 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
 /* PROYECTOS VISTA*/
 
 section.container.postView {
+    background: #f6fbff;
     padding-bottom: 4em;
 }
 

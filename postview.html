@@ -24,8 +24,16 @@
             <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
         </ol>
     </nav>
-
+    <header class="mainHeader">
+        <div class="infoHeader">
+            <h1 id="#">Conectando ideas, materializando sueños</h1>
+        </div>
+        <img src="/img/mainImage.svg">
+    </header>
     <main>
+        <div class="navContent">
+            Titulo de la publicación
+        </div>
         <section class="container postView">
             <section class="mainPost">
                 <section class="userProfile">
@@ -72,19 +80,18 @@
                     </p>
                 </section>
             </section>
-            <section class="commentForm">
 
+            <h3 class="postView"><i class="fa-solid fa-comments"></i> ¡Deja tu comentario!</h3>
+
+            <section class="commentForm">
                 <form action="" id="postComment">
-                    <textarea id="contenidoComment" rows="2" name="comment" form="usrform" placeholder="Escriba aquí su comentario"></textarea>
-                    
-                    <span id="contenidoComment">Agregar comentario</span>                  
-                    <!-- <input id="postComment" type="submit" onclick="crearComentario()"> -->
-                    <button type="button" onclick="crearComentario()">Enviar</button>
+                    <textarea rows="2" name="comment" form="usrform" placeholder="Escriba aquí su comentario"></textarea>
+                    <input id="postComment" type="submit">
                 </form>
             </section>
-        <h3 class="postView"><i class="fa-solid fa-comments"></i> Comentarios publicados</h3>
-        <div id="containerComentarios">
-            <!-- <article class="commentPost">
+        
+            <h3 class="postView"><i class="fa-solid fa-comments"></i> Comentarios publicados</h3>
+            <article class="commentPost">
                 <section class="profileComment">
                     <span class="info Username">Nombre de Usuario</span>
                     <img src="https://via.placeholder.com/150x150" alt="">
@@ -98,7 +105,6 @@
                         </section>
                     </section>
                     <section class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam deserunt aspernatur molestiae quidem laborum voluptatum numquam ducimus. Hic cum tempore id, esse quia, assumenda, facere eos aperiam laborum illo enim soluta aliquam nesciunt minima unde. Omnis et velit quis voluptatum, rem nihil voluptatem consequatur eos minima odit doloribus adipisci fuga magni! Incidunt, nostrum exercitationem ab, iusto ratione beatae aut perferendis maiores eveniet iste a earum natus harum sunt labore laudantium commodi rerum deserunt blanditiis. Tenetur nihil officia accusantium nulla quos ducimus libero quia quisquam corrupti earum ex nisi, saepe ipsum repellendus omnis consequatur. Omnis corporis nihil aliquid labore iste, ex dolore magnam temporibus fugit ratione perferendis alias ducimus numquam sed ut, magni quae consequuntur repellendus explicabo tempore doloremque dicta. Dolorum debitis necessitatibus, est blanditiis explicabo accusamus autem ex rem numquam ea nihil qui itaque consectetur, animi cupiditate, facere voluptate harum atque ad libero repellendus aliquam consequuntur aspernatur facilis. Illo cumque magni perferendis tempore ratione id dolore alias, ab quo voluptates, porro voluptatibus totam animi nesciunt earum velit amet nihil incidunt aliquid, accusamus dolorum atque! Maiores temporibus possimus veniam, recusandae amet sapiente maxime illo doloremque, ut earum nam sunt eaque, minima inventore assumenda quos! Atque laudantium architecto omnis beatae molestiae.</section>
-                    <section class="rateCommentPost">★★★★★</div>
                 </section>
             </article>
 
@@ -115,8 +121,9 @@
                             <button type="button"><i class="fa-solid fa-trash"></i> Eliminar</button>
                         </section>
                     </section>
-                    <section class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam deserunt aspernatur molestiae quidem laborum voluptatum numquam ducimus. Hic cum tempore id, esse quia, assumenda, facere eos aperiam laborum illo enim soluta aliquam nesciunt minima unde. Omnis et velit quis voluptatum, rem nihil voluptatem consequatur eos minima odit doloribus adipisci fuga magni! Incidunt, nostrum exercitationem ab, iusto ratione beatae aut perferendis maiores eveniet iste a earum natus harum sunt labore laudantium commodi rerum deserunt blanditiis. Tenetur nihil officia accusantium nulla quos ducimus libero quia quisquam corrupti earum ex nisi, saepe ipsum repellendus omnis consequatur. Omnis corporis nihil aliquid labore iste, ex dolore magnam temporibus fugit ratione perferendis alias ducimus numquam sed ut, magni quae consequuntur repellendus explicabo tempore doloremque dicta. Dolorum debitis necessitatibus, est blanditiis explicabo accusamus autem ex rem numquam ea nihil qui itaque consectetur, animi cupiditate, facere voluptate harum atque ad libero repellendus aliquam consequuntur aspernatur facilis. Illo cumque magni perferendis tempore ratione id dolore alias, ab quo voluptates, porro voluptatibus totam animi nesciunt earum velit amet nihil incidunt aliquid, accusamus dolorum atque! Maiores temporibus possimus veniam, recusandae amet sapiente maxime illo doloremque, ut earum nam sunt eaque, minima inventore assumenda quos! Atque laudantium architecto omnis beatae molestiae.</section>
-                    <section class="rateCommentPost">★★★★★</div>
+                    <section class="content">
+                        Lorem ipsum dolor sit amet, 
+                    </section>
                 </section>
             </article> -->
         </div>
@@ -210,7 +217,7 @@
                     </div>
                     <div class="modal-footer">
                         <a href="postview.html" class="modal__close" id="modalEliminarClose">Cancelar</a> 
-                        <a href="#" class="modal__close" id="modalEliminarClose" onclick="eliminarPublicacion()">Eliminar</a> 
+                        <a href="#" class="modal__close" id="modalEliminarClose" onclick="eliminarPublicacion()" style="background-color: #b70000">Eliminar</a> 
                       <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
                     </div>
                   </div>
