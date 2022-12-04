@@ -468,11 +468,14 @@ form#postComment .rateComment{
     transition: all 0.3s ease 0s;
 }
 
-.rateComment.reading{
+.rateComment.reading {
     background-color: #55b3d5;
-    width: 10em; 
-    color: #fff;   
+    width: 10em;
+    color: #fff;
     text-align: center;
+    position: relative;
+    float: right;
+    margin-top: -0.2em;
 }
 
 .rateComment.reading:hover{
@@ -1647,12 +1650,19 @@ section.projectOptions {
 
 article.proInd {
     width: 26em;
+    height: 24em;
     background: white;
     box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
     padding: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
     border-radius: 1rem;
+}
+
+article.proInd p.limitado{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 0.9em;
 }
 
 article.proInd h1{
