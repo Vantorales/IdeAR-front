@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     editTitulo.value = dataPublicacion.publicacion[0].titulo ? dataPublicacion.publicacion[0].titulo: "";
     editContenido.value = dataPublicacion.publicacion[0].contenido ? dataPublicacion.publicacion[0].contenido: "";
 
+    datosUsuario();
 
 });
 
@@ -84,3 +85,33 @@ closeModal.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.classList.remove('modal--show');
 });
+
+const openModalEliminar = document.querySelector('#eliminarPublicacion');
+const modalEliminar = document.querySelector('#modalEliminar');
+const closeModalEliminar = document.querySelector('#modalEliminarClose');
+
+openModalEliminar.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modalEliminar.classList.add('modal--show');
+});
+
+closeModalEliminar.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modalEliminar.classList.remove('modal--show');
+})
+
+const datosUsuario = async() => {
+
+    const data = {
+        nickname: "ToralesVanesa"
+      }
+    
+      const url = "http://localhost:8080/api/obtenerUsuario";
+      
+       dataUser = await sendData(url, data, "POST");
+
+
+
+
+
+}

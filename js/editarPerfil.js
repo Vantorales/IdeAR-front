@@ -39,8 +39,9 @@ document.addEventListener('DOMContentLoaded', async ()=> {
     github.value = dataUser.usuario[0].github ? dataUser.usuario[0].github: "";
     paginaWeb.value = dataUser.usuario[0].paginaWeb ? dataUser.usuario[0].paginaWeb : "";
 
-
+  
 });
+
 
 
 const editarPerfil = () => {

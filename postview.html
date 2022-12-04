@@ -30,28 +30,28 @@
 
             <section class="mainPost">
                 <section class="userProfile">
-                    <span class="userName">Nombre del usuario</span>
+                    <span class="userName" id="nickname">Nombre del usuario</span>
 
                     <img src="https://via.placeholder.com/200x200">
 
                     <section class="dataProfile">
                         <h4><i class="fa-solid fa-location-dot"></i> Ubicación</h4>
-                        <span>Ubicación del usuario</span>
+                        <span id="ubicacion"></span>
                     </section>
 
                     <section class="dataProfile">
                         <h4><i class="fa-solid fa-question"></i> Area de Interés</h4>
-                        <span>Area de Interés del Usuario</span>
+                        <span id="areaInteres"></span>
                     </section>
 
                     <section class="dataProfile">
                         <h4><i class="fa-solid fa-message"></i> Publicaciones</h4>
-                        <span>Nro. de Publicaciones</span>
+                        <span id="publicaciones"></span>
                     </section>    
 
                     <section class="dataProfile">  
                         <h4><i class="fa-solid fa-star"></i> Reputación</h4>
-                        <span>Reputación del Usuario</span>
+                        <span id="reputacion"></span>
                     </section>     
                 </section>
 
@@ -65,7 +65,7 @@
                         <span id="fechaCreacion">Fecha</span>
                         <section class="postButtons">
                             <button type="button" class="hero__cta"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                            <button type="button"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                            <button type="button" id="eliminarPublicacion"><i class="fa-solid fa-trash"></i> Eliminar</button>
                         </section>
                     </section>
                     <p id="contenido">
@@ -74,8 +74,17 @@
                     </p>
                 </section>
             </section>
+            <section class="commentForm">
 
-            <h3 class="postView"><i class="fa-solid fa-comments"></i> Comentarios publicados</h3>
+                <form action="" id="postComment">
+                    <textarea rows="2" name="comment" form="usrform">Escriba aquí su comentario</textarea>
+                    
+                    <div class="rateComment">
+                        <span>Agregar comentario</span>                  
+                    <input id="postComment" type="submit">
+                </form>
+            </section>
+        <h3 class="postView"><i class="fa-solid fa-comments"></i> Comentarios publicados</h3>
             <article class="commentPost">
                 <section class="profileComment">
                     <span class="info Username">Nombre de Usuario</span>
@@ -190,7 +199,27 @@
             <a href="#" class="modal__close">Cerrar Modal</a> -->
         </div>
     </section>
+    <section class="modal" id="modalEliminar">
+        <div class="modal__container">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="">Eliminar publicación</h1>                      
+                    </div>
+                    <div class="modal-body">
+                      <h2>¿Seguro de querer borrar la publicación?</h2>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="postview.html" class="modal__close" id="modalEliminarClose">Cancelar</a> 
+                        <a href="#" class="modal__close" id="modalEliminarClose" onclick="eliminarPublicacion()">Eliminar</a> 
+                      <!-- <button type="button" class="btn btn-primary">Enviar</button> -->
+                    </div>
+                  </div>
+            <!-- <h2 class="modal__title">¡Bienvenido al sitio!</h2>
+            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam quas, culpa tempora. Veniam consectetur deleniti maxime.</p>
+            <a href="#" class="modal__close">Cerrar Modal</a> -->
+        </div>
+    </section>
 
     <script src="js/editarPublicacion.js"></script>
+    <script src="js/eliminarPublicacion.js"></script>
 </body>
 </html>
