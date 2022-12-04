@@ -517,10 +517,8 @@ section.items{
 }
 
 section.mainContainer h2.mainTitle{
-    text-align: center;
-    text-transform: uppercase;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2em;
     margin: 0 auto;
 }
 
@@ -538,6 +536,7 @@ section.mainContainer h2.mainTitle{
     font-style: italic;
     color: #727272;
     line-height: 2em;
+    text-align: center;
 }
 
 
@@ -609,10 +608,9 @@ section.roadMap, article.lastNews, section.aboutUs{
 }
 
 section.roadMap{
-    width: 26em!important;
+    width: 26em;
     font-size: 0.8em;
     transition: all 0.2s ease;
-    margin-top: -4em;
     padding: 10em 1em;
 }
 
@@ -639,7 +637,6 @@ section.roadMap:hover, article.lastNews:hover{
 
 section.aboutUs{
     width: 16em;
-    box-shadow: 0px 0px 3px 0px #f0f1f3;
     padding: 4em 1em;
     transition: all 0.2s ease;
 }
@@ -836,7 +833,7 @@ section.dataForm{
 }
 
 section.mainContainer.contactForm section.items img{
-    width: 600px!important;
+    width: 600px;
 }
 
 footer{
@@ -1102,7 +1099,103 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
 }
 
 
+@media only screen and (max-width: 375px) {
+    body{
+        width: 100%;
+    }
 
+    header.mainHeader {
+        width: 100%;
+    }
+
+    header.mainHeader .infoHeader{
+        margin: 0!important;
+    }
+
+    
+    header.mainHeader h1{
+        font-size: 3em;
+        line-height: 100%;
+    }
+
+    header.mainHeader img{
+        display: none;
+    }
+
+    section.mainContainer{
+        width: 152%;
+    }
+
+    .aboutTeam p, .titleContainer span{
+        font-size: 1.4em;
+    }
+
+    .aboutImg{
+        width: 36em!important;
+        margin-bottom: -7em;
+        margin-top: -2em;
+    }
+
+    section.roadMap{
+        width: 40em!important;
+        height: auto!important;
+    }
+
+    section.roadMap p{
+        font-size: 1.8em!important;
+    }
+
+    section.roadMap h3{
+        font-size: 2.6em!important;
+    }
+
+    section.roadMap img {
+        width: 36em!important;
+        height: auto;
+    }
+
+    section.aboutTeam.newProject {
+        width: auto!important;
+    }
+
+    section.aboutUs {
+        width: 30em!important;
+    }
+
+    section.aboutUs h3 {
+        font-size: 1.6em;
+    }
+
+    section.aboutUs p {
+        font-size: 1.3em;
+    }
+
+    i.fa-brands.fa-github.about, i.fa-brands.fa-linkedin-in{
+        font-size: 1.6em;
+    }
+
+    .col-lg-7 {
+        width: 30em;
+        margin-left: -5em;
+        margin-top: 0!important;
+    }
+
+    .col-lg-5 {
+        margin-left: 0!important;
+        margin-top: 0!important;
+    }
+
+    .single_address {
+        display: inline-block;
+        width: 17em;
+    }
+
+    footer{
+        width: 170%;
+        padding-top: 7em!important;
+    }
+
+}
 
 
 @media only screen and (max-width: 767px) {
@@ -1159,8 +1252,8 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
         margin-right: 2em;
     }
 
-    header.mainHeader .infoHeader{
-        margin-left: 2em;
+    .infoHeader{
+        margin-left: 4em;
     }
 
     .infoHeader h1{
@@ -1172,17 +1265,42 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
     }
 
     section.mainContainer h2.mainTitle{
-        font-size: 2.2em;
+        font-size: 2.6em;
     }
 
     section.roadMap{
         padding: 6em 2em!important;
     }
 
-    section.roadMap, article.lastNews, section.aboutUs{
-        width: 20em!important;
+    section.roadMap p {
+        font-size: 1.2em;
+        font-style: normal;
+    }
+
+    section.roadMap, article.lastNews{
+        width: 20em;
         height: 30em;
         margin-top: 0em!important;
+    }
+
+    section.aboutTeam.comunity{
+        width: 20em!important;
+    }
+
+    section.aboutTeam.newProject{
+        width: 16em;
+    }
+
+    .aboutImg{
+        width: 24em;
+    }
+
+    section.aboutUs{
+        width: 18em;
+    }
+
+    section.aboutUs p {
+        font-size: 1em;
     }
 
     section.roadMap h2, article.lastNews h2, article.lastNews h2, section.aboutUs h2{
@@ -1191,9 +1309,12 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
     }
 
     section.roadMap p, article.lastNews p, section.aboutUs p, article.lastNews p{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
+    section.aboutTeam.community{
+        width: 16em;
+    }
     article.lastNews{
         width: 40em;
         display: block;
@@ -1224,8 +1345,16 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
         float: inherit;
     }
 
-    section.aboutUs p, p.aboutContact{
+    p.aboutContact{
         font-size: 2em!important;
+    }
+
+    section.items img.contactImg{
+        display: none;
+    }
+
+    footer {
+        padding-top: 9em;
     }
 
 
