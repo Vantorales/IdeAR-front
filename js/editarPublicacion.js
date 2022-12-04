@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const titulo = document.querySelector("#tituloPublicacion");
     const contenido = document.querySelector("#contenido");
+    const nickname = document.querySelector("#nickname");
     const fechaCreacion =  document.querySelector("#fechaCreacion");
+
+
     const editTitulo = document.querySelector("#editTitulo");
     const editContenido = document.querySelector("#editContenido");
 
@@ -25,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     contenido.innerText = dataPublicacion.publicacion[0].contenido ? dataPublicacion.publicacion[0].contenido: "";
     fechaCreacion.innerText = dataPublicacion.publicacion[0].fechaCreacion ? dataPublicacion.publicacion[0].fechaCreacion: "";
     nickname.innerText = dataPublicacion.publicacion[0].usuario.nickname ? dataPublicacion.publicacion[0].usuario.nickname: "";
+   
     editTitulo.value = dataPublicacion.publicacion[0].titulo ? dataPublicacion.publicacion[0].titulo: "";
     editContenido.value = dataPublicacion.publicacion[0].contenido ? dataPublicacion.publicacion[0].contenido: "";
 
@@ -110,7 +114,12 @@ const datosUsuario = async() => {
       
        dataUser = await sendData(url, data, "POST");
 
-
+      const nickname = document.querySelector("#nickname");
+      const ubicacion = document.querySelector("#ubicacion");
+      const areaInteres = document.querySelector("#areaInteres");
+      const cantidadPublicaciones = document.querySelector("#publicaciones");
+      const reputacion = document.querySelector("#reputacion");
+      
 
 
 
