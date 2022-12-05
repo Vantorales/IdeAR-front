@@ -469,11 +469,14 @@ form#postComment .rateComment{
     transition: all 0.3s ease 0s;
 }
 
-.rateComment.reading{
+.rateComment.reading {
     background-color: #55b3d5;
-    width: 10em; 
-    color: #fff;   
+    width: 10em;
+    color: #fff;
     text-align: center;
+    position: relative;
+    float: right;
+    margin-top: -0.2em;
 }
 
 .rateComment.reading:hover{
@@ -1046,7 +1049,7 @@ section.container.postView.editProfile {
 }
 .form-control, .dataTable-input {
     display: block;
-    width: 98%;
+    width: 96%;
     padding: 0.875rem 1.125rem;
     font-size: 0.875rem;
     font-weight: 400;
@@ -1635,6 +1638,12 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
 
 /* PROYECTOS VISTA*/
 
+section.projects {
+    width: 70em;
+    margin: 0 auto;
+    padding-top: 1.2em;
+}
+
 section.container.postView {
     background: #f6fbff;
     padding-bottom: 4em;
@@ -1648,12 +1657,19 @@ section.projectOptions {
 
 article.proInd {
     width: 26em;
+    height: 24em;
     background: white;
     box-shadow: 0em 0em 1em rgb(0 0 0 / 7%);
     padding: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
     border-radius: 1rem;
+}
+
+article.proInd p.limitado{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 0.9em;
 }
 
 article.proInd h1{

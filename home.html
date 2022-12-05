@@ -10,14 +10,27 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/scripts/scripts.js"></script>
+    <script>
+		document.addEventListener('DOMContentLoaded', ()=> {
+		
+			const userInit = JSON.parse(localStorage.getItem("UserInit"));
+			const {logout} = userInit;
+			console.log(userInit);
+		
+			if(logout === false ){
+				location.href = "index.html";
+			}
+		
+		})	
+	</script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <style>
         .publicacionContent{
-            display: flex;
             background: var(--main-bg-color);
+            display: flex;
             padding: 2rem;
             border-radius: 1rem;
             flex-flow: column;
@@ -31,7 +44,6 @@
 
         section.principalPost {
             background-color: var(--main-bg2-color);
-            padding: 2rem 15rem 0;
             display: flex;
             margin: 0 auto;
         }
@@ -46,7 +58,10 @@
         <a href="#home" class="logoNav"><i class='fas fa-brain'></i> IdeAR</a>
         <span class="menuIcon"><i class="fa-solid fa-bars"></i></span>
         <ol class="navOptions">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Publicaciones</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+            <li><a href="#team">Nosotros</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ol>
         <ol class="userOptions">
             <li><a href="register.html"><i class="fa-solid fa-user"></i> Mi cuenta</a></li>
@@ -71,126 +86,21 @@
         </script>
 
         <section class="container postView">
-            
-            <section class="principalPost">
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p class="limitado">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
-                    </p>
-                    <div class="rateComment reading">
-                        <span>Continuar leyendo</span>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="container postView">
-            
-            <section class="principalPost">
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p class="limitado">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
-                    </p>
-                    <div class="rateComment reading">
-                        <span>Continuar leyendo</span>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="container postView">
-            
-            <section class="principalPost">
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p class="limitado">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
-                    </p>
-                    <div class="rateComment reading">
-                        <span>Continuar leyendo</span>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="container postView">
-            
-            <section class="principalPost">
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p class="limitado">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
-                    </p>
-                    <div class="rateComment reading">
-                        <span>Continuar leyendo</span>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="container postView">
-            
-            <section class="principalPost">
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p class="limitado">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
-                    </p>
-                    <div class="rateComment reading">
-                        <span>Continuar leyendo</span>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="container postView">
-            
-            <section class="principalPost">
-                <section class="publicacionContent">
-                    <h2>Titulo de la Publicación</h2>
-                    <section class="postNav">
-                        <span>por <b>Nombre de Usuario</b></span>
-                        <span>Fecha</span>
-                    </section>
-                    <p class="limitado">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel!
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quod? Qui doloremque rerum quo. Provident, obcaecati. Tempora quisquam laudantium error, iusto officiis nesciunt, accusamus autem ipsam reiciendis quia et corporis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil accusamus esse beatae porro, voluptatibus dolorum neque ipsam natus cum perspiciatis, excepturi ea, nesciunt optio animi aperiam eum quod perferendis quis dicta earum atque molestiae maxime pariatur? Laudantium dolore iusto fugiat voluptates fuga autem enim incidunt tempora illo! Hic soluta esse cumque tempore fugiat consectetur ipsum nobis! Explicabo, accusantium eius similique delectus sapiente dolorem quae impedit iure laboriosam molestias enim. Atque delectus doloribus quibusdam repellat voluptas quidem incidunt impedit cum porro optio ut corporis accusamus id voluptatibus voluptates amet commodi exercitationem enim, earum maiores repellendus fuga? Commodi quaerat corrupti maiores officia.
-                    </p>
-                    <div class="rateComment reading">
-                        <span>Continuar leyendo</span>
-                    </div>
-                </section>
-            </section>
-        </section>
+            <div class="navContent">
+                
+            </div>
 
+            <section class="projectOptions">
+                <a href="postProject.html" class="btn-contact-bg"><i class="fa-solid fa-square-plus"></i> Hacer publicación</a>
+                <br>
+            </section>
+
+            <section class="projects" >
+                <section class="items" id="containerPublicaciones">
+
+                </section>
+            </section>
+        </section>
     </main>          
     <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -217,5 +127,7 @@
             Copyright © 2022 All rights reserved
         </p>
     </footer>
+    <script src="js/helpers.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

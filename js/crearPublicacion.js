@@ -6,8 +6,10 @@ const crearPublicacion = () => {
     yourDate = yourDate.toISOString().split('T')[0]
     
 
+    const userInit = JSON.parse(localStorage.getItem("UserInit"));
+    const { nickname } = userInit;
     const data = {
-        nickname: "VanesaT",
+        nickname,
         titulo,
         contenido,
         fechaCreacion: yourDate

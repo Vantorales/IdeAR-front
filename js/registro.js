@@ -56,6 +56,7 @@ const registro = () => {
     try {
         const response = await fetch(url, myInit);
         const responseJSON = await response.json();
+        console.log("sendData info: " + responseJSON);
         redirectHome(responseJSON);
 
     } catch(error){
@@ -64,23 +65,18 @@ const registro = () => {
 
     const redirectHome = async(data) =>{
 
-        const {creacionCorrecta} = data; //trae la info de la petición
+        const {creacionCorrecta} = await data; //trae la info de la petición
         console.log(creacionCorrecta);
     
     
     
         if(creacionCorrecta){ //verificamos que el usuario se encuentre registrado
-            
-          let userInit = {
-            logout: creacionCorrecta,
-          };
     
-          localStorage.setItem("UserInit",JSON.stringify(userInit));
-          location.href = 'home.html';
+          location.href = 'login.html';
           
     
         }else{
-          console.log("login fail");
+          console.log("Registro fail");
         }
         
         }

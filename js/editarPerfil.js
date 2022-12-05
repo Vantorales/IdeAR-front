@@ -8,18 +8,21 @@ let ubicacion;
 let fechaNacimiento;
 let github;
 let paginaWeb;
+
+
    
 document.addEventListener('DOMContentLoaded', async ()=> {
-
-  const data = {
-    nickname: "VanesaT"
-  }
+    const userInit = JSON.parse(localStorage.getItem("UserInit"));
+    const { nickname } = userInit;
+    const data = {
+        nickname
+    }
 
   const url = "http://localhost:8080/api/obtenerUsuario";
   
    dataUser = await sendData(url, data, "POST");
 
-    const nickname = document.querySelector("#nickname");
+    const nicknameEditProfile = document.querySelector("#nickname");
     const email = document.querySelector("#email");
     const nombre = document.querySelector("#nombre");
     const apellido = document.querySelector("#apellido");
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async ()=> {
     const github = document.querySelector("#github");
     const paginaWeb = document.querySelector("#paginaWeb");
 
-    nickname.value = dataUser.usuario[0].nickname ? dataUser.usuario[0].nickname: "";
+    nicknameEditProfile.value = dataUser.usuario[0].nickname ? dataUser.usuario[0].nickname: "";
     email.value = dataUser.usuario[0].email ? dataUser.usuario[0].email: "";
     nombre.value = dataUser.usuario[0].nombre ? dataUser.usuario[0].nombre: "";
     apellido.value = dataUser.usuario[0].apellido ? dataUser.usuario[0].apellido: "";

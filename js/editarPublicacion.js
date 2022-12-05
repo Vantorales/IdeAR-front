@@ -5,8 +5,12 @@ let fechaCreacion;
 
 document.addEventListener('DOMContentLoaded', async () => {
 
+    let id = sessionStorage.getItem("idPublicacion");
+    sessionStorage.removeItem("idPublicacion");
+
+
     const data = {
-        id: "638bd063534c1a6e925db3a8"
+        id
     }
 
     const url = "http://localhost:8080/api/obtenerPublicacion";
@@ -104,31 +108,3 @@ closeModalEliminar.addEventListener('click', (e)=>{
     modalEliminar.classList.remove('modal--show');
 })
 
-const datosUsuario = async() => {
-
-    const data = {
-        nickname: "VanesaT"
-      }
-    
-      const url = "http://localhost:8080/api/obtenerUsuario";
-      
-       dataUser = await sendData(url, data, "POST");
-      console.log(dataUser);
-
-       //OBTENCION DE TAGS
-      const nickname = document.querySelector("#nickname");
-      const ubicacion = document.querySelector("#ubicacion");
-      const areaInteres = document.querySelector("#areaInteres");
-      const cantidadPublicaciones = document.querySelector("#publicaciones");
-      const reputacion = document.querySelector("#reputacion");
-
-nickname.innerHTML = dataUser.usuario[0].nickname;
-ubicacion.innerHTML = dataUser.usuario[0].ubicacion;
-areaInteres.innerHTML = dataUser.usuario[0].areaInteres;
-cantidadPublicaciones.innerHTML = dataUser.usuario[0].publicacion;
-reputacion.innerHTML = dataUser.usuario[0].reputacion;
-      
-
-
-
-}

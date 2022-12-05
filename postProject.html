@@ -10,13 +10,26 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/scripts/scripts.js"></script>
+    <script>
+		document.addEventListener('DOMContentLoaded', ()=> {
+		
+			const userInit = JSON.parse(localStorage.getItem("UserInit"));
+			const {logout} = userInit;
+			console.log(userInit);
+		
+			if(logout === false ){
+				location.href = "index.html";
+			}
+		
+		})	
+	</script>
 </head>
 <body>
     <nav>
         <a href="#home" class="logoNav"><i class='fas fa-brain'></i> IdeAR</a>
         <span class="menuIcon"><i class="fa-solid fa-bars"></i></span>
         <ol class="navOptions">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="home.html">Publicaciones</a></li>
         </ol>
         <ol class="userOptions">
             <li><a href="profile.html"><i class="fa-solid fa-user"></i> Mi perfil</a></li>
@@ -28,7 +41,7 @@
         <section class="container postView">
 
             <section class="projects">
-                <h3 class="postView" style="margin-top: 4em"><i class="fa-solid fa-square-plus"></i> Hacer publicacion</h3>
+                <h3 class="postView" style="margin-top: 4em"><i class="fa-solid fa-square-plus"></i> Crear publicación</h3>
                 <section class="bodyPost">
                     <form action="">
                         <div class="form-outline mb-4">
@@ -53,7 +66,7 @@
         </section>
     </main>
     <br>
-    <footer style="margin-top: 4em">
+    <footer style="margin-top: -1em">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#f6fbff" fill-opacity="1" d="M0,192L30,176C60,160,120,128,180,138.7C240,149,300,203,360,213.3C420,224,480,192,540,176C600,160,660,160,720,149.3C780,139,840,117,900,133.3C960,149,1020,203,1080,218.7C1140,235,1200,213,1260,186.7C1320,160,1380,128,1410,112L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
         </svg>

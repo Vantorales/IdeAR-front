@@ -10,13 +10,26 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/scripts/scripts.js"></script>
+    <script>
+		document.addEventListener('DOMContentLoaded', ()=> {
+		
+			const userInit = JSON.parse(localStorage.getItem("UserInit"));
+			const {logout} = userInit;
+			console.log(userInit);
+		
+			if(logout === false ){
+				location.href = "index.html";
+			}
+		
+		})
+	</script>
 </head>
 <body>
     <nav>
         <a href="index.html" class="logoNav"><i class='fas fa-brain'></i> IdeAR</a>
         <span class="menuIcon"><i class="fa-solid fa-bars"></i></span>
         <ol class="navOptions">
-            <li><a href="home.html">Home</a></li>
+            <li><a href="home.html">Publicaciones</a></li>
             <li><a href="postProject.html">Crear publicacion</a></li>
             <li><a onclick="editarPerfil()" href="editProfile.html"> Editar perfil</a></li>
                 <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
@@ -25,46 +38,34 @@
     <main>
         <section class="container postView">
             <div class="navContent">
-                Perfil de "Nombre de Usuario"
             </div>
 
             <section class="mainPost profile">
 
                 <section class="userProfile view">
-                    <span class="userName">Nombre del usuario</span>
+                    <span class="userName" id="nickname"></span>
 
                     <img src="https://via.placeholder.com/200x200">
 
                     <section class="dataProfile">
                         <h4><i class="fa-solid fa-location-dot"></i> Ubicación</h4>
-                        <span>Ubicación del usuario</span>
+                        <span id="ubicacion"></span>
                     </section>
 
                     <section class="dataProfile">
                         <h4><i class="fa-solid fa-question"></i> Area de Interés</h4>
-                        <span>Area de Interés del Usuario</span>
+                        <span id="areaInteres"></span>
                     </section>
 
                     <section class="dataProfile">
                         <h4><i class="fa-solid fa-message"></i> Publicaciones</h4>
-                        <span>Nro. de Publicaciones</span>
+                        <span id="publicaciones"></span>
                     </section>    
 
                     <section class="dataProfile">  
                         <h4><i class="fa-solid fa-star"></i> Reputación</h4>
-                        <span>Reputación del Usuario</span>
+                        <span id="reputacion"></span>
                     </section>   
-
-                    <section class="dataProfile">  
-                        <h4><i class="fa-brands fa-github"></i> Github</h4>
-                        <span>Github del Usuario</span>
-                    </section>   
-
-                    <section class="dataProfile">  
-                        <h4><i class="fa-solid fa-globe"></i> Página web</h4>
-                        <span>Página web del Usuario</span>
-                    </section>   
-
 
                 </section>
 

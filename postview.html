@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="/css/modal.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/scripts/scripts.js"></script>
+    <script>
+		document.addEventListener('DOMContentLoaded', ()=> {
+		
+			const userInit = JSON.parse(localStorage.getItem("UserInit"));
+			const {logout} = userInit;
+			console.log(userInit);
+		
+			if(logout === false ){
+				location.href = "index.html";
+			}
+		
+		})
+	</script>
 </head>
 <body>
     <nav>
@@ -102,7 +115,7 @@
                         </section>
                         <section class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam deserunt aspernatur molestiae quidem laborum voluptatum numquam ducimus. Hic cum tempore id, esse quia, assumenda, facere eos aperiam laborum illo enim soluta aliquam nesciunt minima unde. Omnis et velit quis voluptatum, rem nihil voluptatem consequatur eos minima odit doloribus adipisci fuga magni! Incidunt, nostrum exercitationem ab, iusto ratione beatae aut perferendis maiores eveniet iste a earum natus harum sunt labore laudantium commodi rerum deserunt blanditiis. Tenetur nihil officia accusantium nulla quos ducimus libero quia quisquam corrupti earum ex nisi, saepe ipsum repellendus omnis consequatur. Omnis corporis nihil aliquid labore iste, ex dolore magnam temporibus fugit ratione perferendis alias ducimus numquam sed ut, magni quae consequuntur repellendus explicabo tempore doloremque dicta. Dolorum debitis necessitatibus, est blanditiis explicabo accusamus autem ex rem numquam ea nihil qui itaque consectetur, animi cupiditate, facere voluptate harum atque ad libero repellendus aliquam consequuntur aspernatur facilis. Illo cumque magni perferendis tempore ratione id dolore alias, ab quo voluptates, porro voluptatibus totam animi nesciunt earum velit amet nihil incidunt aliquid, accusamus dolorum atque! Maiores temporibus possimus veniam, recusandae amet sapiente maxime illo doloremque, ut earum nam sunt eaque, minima inventore assumenda quos! Atque laudantium architecto omnis beatae molestiae.</section>
                     </section>
-                </article>
+                </article> -->
     
                  <article class="commentPost">
                     <section class="profileComment">
@@ -121,9 +134,12 @@
                             Lorem ipsum dolor sit amet, 
                         </section>
                     </section>
-                </article> -->
-                
-            </div>
+                    <section class="content">
+                        Lorem ipsum dolor sit amet, 
+                    </section>
+                </section>
+            </article>
+        </div>
             
             
             <!-- <h3 class="postView"><i class="fa-solid fa-magnifying-glass"></i> También te puede interesar</h3>
