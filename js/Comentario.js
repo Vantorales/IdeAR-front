@@ -42,7 +42,7 @@ const cargarComentarios = async(idPublicacion) => {
         <section class="profileComment">
             <p style="display:none" id="idComentario">${comentario._id}</p>
             <span class="info Username">${comentario.idUsuario.nickname}</span>
-            <img src="https://via.placeholder.com/150x150" alt="">
+            <img src="/img/user.png" alt="">
             <span class="info Interest">${comentario.idUsuario.areaInteres}</span>
         </section>
         <section class="commentContent">
