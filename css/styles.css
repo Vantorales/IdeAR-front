@@ -1048,7 +1048,7 @@ section.container.postView.editProfile {
 }
 .form-control, .dataTable-input {
     display: block;
-    width: 98%;
+    width: 96%;
     padding: 0.875rem 1.125rem;
     font-size: 0.875rem;
     font-weight: 400;
@@ -1636,6 +1636,12 @@ p.mb-5.pb-lg-2, a.small.text-muted, .form-label{
 
 
 /* PROYECTOS VISTA*/
+
+section.projects {
+    width: 70em;
+    margin: 0 auto;
+    padding-top: 1.2em;
+}
 
 section.container.postView {
     background: #f6fbff;
