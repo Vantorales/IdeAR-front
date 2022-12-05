@@ -1,20 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    datosUsuario()
+  });
 
-    let nickname = sessionStorage.getItem("nickname");
-   //OBTENCION DE TAGS
-      const ubicacion = document.querySelector("#ubicacion");
-      const areaInteres = document.querySelector("#areaInteres");
-      const cantidadPublicaciones = document.querySelector("#publicaciones");
-      const reputacion = document.querySelector("#reputacion");
 
-nicknamePub.innerHTML = dataUser.usuario[0].nickname;
-ubicacion.innerHTML = dataUser.usuario[0].ubicacion;
-areaInteres.innerHTML = dataUser.usuario[0].areaInteres;
-cantidadPublicaciones.innerHTML = dataUser.usuario[0].publicacion;
-reputacion.innerHTML = dataUser.usuario[0].reputacion;
-
-datosUsuario();
-});
 
 const datosUsuario = async() => {
     const userInit = JSON.parse(localStorage.getItem("UserInit"));
@@ -27,4 +15,19 @@ const datosUsuario = async() => {
       
        dataUser = await sendData(url, data, "POST");
       console.log(dataUser);
-    }
+
+       //OBTENCION DE TAGS
+      const nicknamePub = document.querySelector("#nicknamePub") 
+      const ubicacion = document.querySelector("#ubicacion");
+      const areaInteres = document.querySelector("#areaInteres");
+      const cantidadPublicaciones = document.querySelector("#publicaciones");
+      const reputacion = document.querySelector("#reputacion");
+
+nicknamePub.innerHTML = dataUser.usuario[0].nickname;
+ubicacion.innerHTML = dataUser.usuario[0].ubicacion;
+areaInteres.innerHTML = dataUser.usuario[0].areaInteres;
+cantidadPublicaciones.innerHTML = dataUser.usuario[0].publicacion;
+reputacion.innerHTML = dataUser.usuario[0].reputacion;
+      
+
+}

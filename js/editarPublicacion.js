@@ -3,10 +3,12 @@ let titulo;
 let contenido;
 let fechaCreacion;
 
+
 document.addEventListener('DOMContentLoaded', async () => {
 
-    let id = sessionStorage.getItem("idPublicacion");
-    sessionStorage.removeItem("idPublicacion");
+    const dataPublicacion = JSON.parse(localStorage.getItem("infoPubli"));
+    let { id } = dataPublicacion;
+    // localStorage.removeItem("infoPubli");
 
 
     const data = {
@@ -15,31 +17,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const url = "http://localhost:8080/api/obtenerPublicacion";
 
-    dataPublicacion = await sendData(url, data, "POST");
+    let infoPublicacionres = await sendData(url, data, "POST");
 
     const titulo = document.querySelector("#tituloPublicacion");
     const contenido = document.querySelector("#contenido");
     const nickname = document.querySelector("#nicknamePublicacion");
     const fechaCreacion =  document.querySelector("#fechaCreacion");
+    const idpublicacionview =  document.querySelector("#idpublicacionview");
 
 
     const editTitulo = document.querySelector("#editTitulo");
     const editContenido = document.querySelector("#editContenido");
 
-
-    titulo.innerText = dataPublicacion.publicacion[0].titulo ? dataPublicacion.publicacion[0].titulo: "";
-    contenido.innerText = dataPublicacion.publicacion[0].contenido ? dataPublicacion.publicacion[0].contenido: "";
-    fechaCreacion.innerText = dataPublicacion.publicacion[0].fechaCreacion ? dataPublicacion.publicacion[0].fechaCreacion: "";
-    nickname.innerText = dataPublicacion.publicacion[0].usuario.nickname ? dataPublicacion.publicacion[0].usuario.nickname: "";
+    idpublicacionview.innerText = id;
+    titulo.innerText = infoPublicacionres.publicacion[0].titulo ? infoPublicacionres.publicacion[0].titulo: "";
+    contenido.innerText = infoPublicacionres.publicacion[0].contenido ? infoPublicacionres.publicacion[0].contenido: "";
+    fechaCreacion.innerText = infoPublicacionres.publicacion[0].fechaCreacion ? infoPublicacionres.publicacion[0].fechaCreacion: "";
+    nickname.innerText = infoPublicacionres.publicacion[0].usuario.nickname ? infoPublicacionres.publicacion[0].usuario.nickname: "";
    
-    editTitulo.value = dataPublicacion.publicacion[0].titulo ? dataPublicacion.publicacion[0].titulo: "";
-    editContenido.value = dataPublicacion.publicacion[0].contenido ? dataPublicacion.publicacion[0].contenido: "";
+    editTitulo.value = infoPublicacionres.publicacion[0].titulo ? infoPublicacionres.publicacion[0].titulo: "";
+    editContenido.value = infoPublicacionres.publicacion[0].contenido ? infoPublicacionres.publicacion[0].contenido: "";
 
     datosUsuario();
-    cargarComentarios();
+    cargarComentarios(id);
 
 });
-
 
 const editarPublicacion = () => {
 
@@ -47,11 +49,12 @@ const editarPublicacion = () => {
 
     const titulo = document.querySelector("#editTitulo").value;
     const contenido = document.querySelector("#editContenido").value;
+    const id = document.querySelector("#idpublicacionview").innerText;
 
     const data = {
         titulo,
         contenido,
-        id: "638bd063534c1a6e925db3a8"
+        id
         }
 
     const url = "http://localhost:8080/api/editarPublicacion";
@@ -78,6 +81,34 @@ const sendData = async(url, data, method) => {
     } catch(error){
         console.log(error);
     }
+}
+
+const datosUsuario = async() => {
+    const userInit = JSON.parse(localStorage.getItem("UserInit"));
+    const { nickname } = userInit;
+    const data = {
+        nickname
+      }
+    
+      const url = "http://localhost:8080/api/obtenerUsuario";
+      
+       dataUser = await sendData(url, data, "POST");
+      console.log(dataUser);
+
+       //OBTENCION DE TAGS
+      const nicknamePub = document.querySelector("#nickname") 
+      const ubicacion = document.querySelector("#ubicacion");
+      const areaInteres = document.querySelector("#areaInteres");
+      const cantidadPublicaciones = document.querySelector("#publicaciones");
+      const reputacion = document.querySelector("#reputacion");
+
+nicknamePub.innerHTML = dataUser.usuario[0].nickname;
+ubicacion.innerHTML = dataUser.usuario[0].ubicacion;
+areaInteres.innerHTML = dataUser.usuario[0].areaInteres;
+cantidadPublicaciones.innerHTML = dataUser.usuario[0].publicacion;
+reputacion.innerHTML = dataUser.usuario[0].reputacion;
+      
+
 }
 
 const openModal = document.querySelector('.hero__cta');

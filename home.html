@@ -64,8 +64,8 @@
             <li><a href="#contact">Contacto</a></li>
         </ol>
         <ol class="userOptions">
-            <li><a href="register.html"><i class="fa-solid fa-user"></i> Mi cuenta</a></li>
-            <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
+            <!-- <li><a href="register.html"><i class="fa-solid fa-user"></i> Mi cuenta</a></li> -->
+            <li><a href="" onclick="exit()"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
         </ol>
     </nav>
     <main>
@@ -91,7 +91,7 @@
             </div>
 
             <section class="projectOptions">
-                <a href="postProject.html" class="btn-contact-bg"><i class="fa-solid fa-square-plus"></i> Hacer publicación</a>
+                <a href="postProject.html" class="btn-contact-bg"><i class="fa-solid fa-square-plus" type="button"></i> Hacer publicación</a>
                 <br>
             </section>
 
@@ -127,6 +127,20 @@
             Copyright © 2022 All rights reserved
         </p>
     </footer>
+    <!-- <script>
+
+		const exit = () =>{
+			console.log("salio");
+			let UsuarioInit = {
+				logout:false,
+				name:"",
+			};
+			localStorage.getItem(UsuarioInit);
+			localStorage.removeItem("infoPubli");
+			location.href = "index.html";
+
+		}
+	</script> -->
     <script src="js/helpers.js"></script>
     <script src="js/home.js"></script>
 </body>

@@ -1,30 +1,35 @@
 const crearComentario = async() => {
-
+    const idPublicacion = document.querySelector("#idpublicacionview").innerText;
     const comentario = document.querySelector("#contenidoComment").value;
+
     let fechaComentario = new Date()
     fechaComentario = fechaComentario.toISOString().split('T')[0]
 
+    const userInit = JSON.parse(localStorage.getItem("UserInit"));
+    const { nickname } = userInit;
+
     const data = {
-        idUsuario : "638a2f711c8e1f01996914cf",
-        idPublicacion : "638bd063534c1a6e925db3a8",
+        nickname,
+        idPublicacion,
         contenido: comentario,
         fechaCreacion: fechaComentario
     }
 
     const url = "http://localhost:8080/api/nuevoComentario";
     const responseData = await sendData(url, data, "POST");
+    location.reload();
 
     console.log("crearComentario: " + responseData);
-
+    
 
 }
 
 
-const cargarComentarios = async() => {
+const cargarComentarios = async(idPublicacion) => {
 
     let containerComentario = document.querySelector("#containerComentarios");
     const data = {
-        idPublicacion:"638bd063534c1a6e925db3a8",
+        idPublicacion
     }
 
     const url = "http://localhost:8080/api/obtenerComentarios";
@@ -60,6 +65,29 @@ const cargarComentarios = async() => {
 
 }
 
+const redirectHome = async(data) =>{
+
+    const {creacionCorrecta} = data; //trae la info de la petición
+    console.log(creacionCorrecta);
+
+
+
+    if(creacionCorrecta){ //verificamos que el usuario se encuentre registrado
+        
+      let userInit = {
+        logout: creacionCorrecta,
+      };
+
+      localStorage.setItem("Publicacino enviada",JSON.stringify(userInit));
+      location.href = 'home.html';
+      
+
+    }else{
+      console.log("Publicacion fallida");
+    }
+    
+    }
+
 const eliminarComentario = (dataComentario) => {
     let idComentario = dataComentario.parentElement.parentElement.parentElement.parentNode.childNodes[1].childNodes[1].innerText;
     
@@ -70,5 +98,6 @@ const eliminarComentario = (dataComentario) => {
     const url = "http://localhost:8080/api/eliminarComentario";
 
     sendData(url, data, "DELETE");
+    location.reload();
 
 }

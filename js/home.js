@@ -28,7 +28,7 @@ const getPublicaciones = async() => {
         <div class="projectData">
             por <b>${publicacion.usuario.nickname} </b>| ${publicacion.fechaCreacion}
             <div class="rateComment reading">
-                <span onclick="irPublicacion()">Continuar leyendo</span>
+                <span onclick="irPublicacion(this)">Continuar leyendo</span>
             </div>
         </div>
 
@@ -40,13 +40,29 @@ const getPublicaciones = async() => {
 
 }
 
-const irPublicacion = async( )=>{
-    let id = document.querySelector("#idPublicacion");
+const irPublicacion = async( target )=>{
+    let id = target.parentNode.parentNode.parentNode.childNodes[3].innerText;
     // const url = `http://localhost:8080/api/api/obtenerPublicacion/${id}`;
     // let responseJson = await sendDataGet(url);
     // let publicaciones = responseJson.publicacion;
-    sessionStorage.setItem("idPublicacion", id);
+    let info = {
+        id
+    }
+
+    localStorage.setItem("infoPubli",JSON.stringify(info));
+    // sessionStorage.setItem("idPublicacion", id);
     location.href = 'postview.html';
     
 
 }
+const exit = () =>{
+        console.log("salio");
+        let UsuarioInit = {
+            logout:false,
+            name:"",
+        };
+        localStorage.setItem("UserInit" ,JSON.stringify(UsuarioInit));
+        localStorage.removeItem("infoPubli");
+        location.href = "index.html";
+
+    }

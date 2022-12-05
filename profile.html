@@ -30,10 +30,20 @@
         <span class="menuIcon"><i class="fa-solid fa-bars"></i></span>
         <ol class="navOptions">
             <li><a href="home.html">Publicaciones</a></li>
+            <li><a onclick="editarPerfil()" href="editProfile.html"> Editar perfil</a></li>
+            <li><a href="#team">Nosotros</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ol>
+        <ol class="userOptions">
+            <!-- <li><a href="register.html"><i class="fa-solid fa-user"></i> Mi cuenta</a></li> -->
+            <li><a href="" onclick="exit()"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
+        </ol>
+        <!-- <ol class="navOptions">
+            <li><a href="home.html">Publicaciones</a></li>
             <li><a href="postProject.html">Crear publicacion</a></li>
             <li><a onclick="editarPerfil()" href="editProfile.html"> Editar perfil</a></li>
                 <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
-        </ol>
+        </ol> -->
     </nav>
     <main>
         <section class="container postView">
@@ -43,9 +53,9 @@
             <section class="mainPost profile">
 
                 <section class="userProfile view">
-                    <span class="userName" id="nickname"></span>
+                    <span class="userName" id="nicknamePub"></span>
 
-                    <img src="https://via.placeholder.com/200x200">
+                    <img src="/img/user.png">
 
                     <section class="dataProfile">
                         <h4><i class="fa-solid fa-location-dot"></i> Ubicación</h4>
@@ -106,5 +116,21 @@
             <a href="">Politica de Privacidad</a>
         </p>
     </footer>
+    <script>
+        const exit = () =>{
+        console.log("salio");
+        let UsuarioInit = {
+            logout:false,
+            name:"",
+        };
+        localStorage.setItem("UserInit" ,JSON.stringify(UsuarioInit));
+        localStorage.removeItem("infoPubli");
+        location.href = "index.html";
+
+    }
+    </script>
+    <script src="js/helpers.js"></script>
+    <script src="js/perfil.js"></script>
+    
 </body>
 </html>

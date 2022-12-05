@@ -30,16 +30,18 @@
         <a href="#home" class="logoNav"><i class='fas fa-brain'></i> IdeAR</a>
         <span class="menuIcon"><i class="fa-solid fa-bars"></i></span>
         <ol class="navOptions">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="home.html">Publicaciones</a></li>
+            <li><a onclick="editarPerfil()" href="profile.html">Perfil</a></li>
+                <!-- <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li> -->
         </ol>
         <ol class="userOptions">    
-            <li><a href="register.html"><i class="fa-solid fa-user"></i> Perfil</a></li>
-            <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
+            <!-- <li><a href="register.html"><i class="fa-solid fa-user"></i> Perfil</a></li> -->
+            <li><a href="" onclick="exit()" ><i class="fa-solid fa-right-to-bracket"></i> Desconectarse</a></li>
         </ol>
     </nav>
     <main>
         <div class="navContent">
-            Titulo de la publicación
         </div>
         <section class="container postView">
             <section class="mainPost">
@@ -70,6 +72,7 @@
                 </section>
 
                 <section class="postContent">
+                    <div id="idpublicacionview" style="display: none"></div>
                     <div id="containerTitulo">
                         <h2 id="tituloPublicacion">Titulo de la Publicación</h2>
                     </div>
@@ -93,7 +96,7 @@
             <section class="commentForm">
                 <form action="" id="postComment">
                     <textarea id="contenidoComment" rows="2" name="comment" form="usrform" placeholder="Escriba aquí su comentario"></textarea>
-                    <input id="postComment" onclick="crearComentario()" value="Enviar">
+                    <input type="button" id="postComment" onclick="crearComentario()" value="Enviar">
                 </form>
             </section>
         
@@ -117,7 +120,7 @@
                     </section>
                 </article> -->
     
-                 <article class="commentPost">
+                 <!-- <article class="commentPost">
                     <section class="profileComment">
                         <span class="info Username">Nombre de Usuario</span>
                         <img src="https://via.placeholder.com/150x150" alt="">
@@ -134,11 +137,11 @@
                             Lorem ipsum dolor sit amet, 
                         </section>
                     </section>
-                    <section class="content">
+                    <!-- <section class="content">
                         Lorem ipsum dolor sit amet, 
-                    </section>
-                </section>
-            </article>
+                    </section> -->
+                <!-- </section>
+            </article> -->
         </div>
             
             
@@ -239,9 +242,22 @@
             <a href="#" class="modal__close">Cerrar Modal</a> -->
         </div>
     </section>
+    <script>
+        const exit = () =>{
+        console.log("salio");
+        let UsuarioInit = {
+            logout:false,
+            name:"",
+        };
+        localStorage.setItem("UserInit" ,JSON.stringify(UsuarioInit));
+        localStorage.removeItem("infoPubli");
+        location.href = "index.html";
+
+    }
+    </script>
 
     <script src="js/editarPublicacion.js"></script>
     <script src="js/eliminarPublicacion.js"></script>
-    <script src="js/Comentario.js"></script>
+    <script src="js/comentario.js"></script>
 </body>
 </html>

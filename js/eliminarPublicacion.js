@@ -1,11 +1,13 @@
 const eliminarPublicacion = () => {
 
+    const id = document.querySelector("#idpublicacionview").innerText;
     const data = {
-        id : "638b98a54ce090a20b1dbda2"
+        id
     }
 
     const url = "http://localhost:8080/api/eliminarPublicacion";
     sendData(url, data, "DELETE");
+    location.href="home.html";
 
 }
 

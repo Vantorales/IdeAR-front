@@ -69,7 +69,7 @@ const sendData = async(data) => {
             logout: creacionCorrecta,
           };
     
-          localStorage.setItem("Publicacino enviada",JSON.stringify(userInit));
+          localStorage.setItem("Publicacion enviada",JSON.stringify(userInit));
           location.href = 'home.html';
           
     
