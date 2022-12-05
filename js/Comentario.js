@@ -14,6 +14,8 @@ const crearComentario = async() => {
     const url = "http://localhost:8080/api/nuevoComentario";
     const responseData = await sendData(url, data, "POST");
 
+    console.log("crearComentario: " + responseData);
+
 
 }
 
@@ -33,6 +35,7 @@ const cargarComentarios = async() => {
 
         let bodyComentario = `<article class="commentPost">
         <section class="profileComment">
+            <p style="display:none" id="idComentario">${comentario._id}</p>
             <span class="info Username">${comentario.idUsuario.nickname}</span>
             <img src="https://via.placeholder.com/150x150" alt="">
             <span class="info Interest">${comentario.idUsuario.areaInteres}</span>
@@ -41,13 +44,14 @@ const cargarComentarios = async() => {
             <section class="commentData">
                 <span class="dateComment">${comentario.fechaCreacion}</span>
                 <section class="commentButtons">
-                    <button type="button"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                    <button type="button" onclick="eliminarComentario(this)"><i class="fa-solid fa-trash"></i> Eliminar</button>
                 </section>
             </section>
-            <section class="content">${comentario.contenido}</section>
-            <section class="rateCommentPost">★★★★★</div>
+            <section class="content">
+                ${comentario.contenido}
+            </section>
         </section>
-        </article>`
+    </article>`
 
         containerComentario.innerHTML += bodyComentario;
         
@@ -56,7 +60,15 @@ const cargarComentarios = async() => {
 
 }
 
-const eliminarComentario = () => {
-
+const eliminarComentario = (dataComentario) => {
+    let idComentario = dataComentario.parentElement.parentElement.parentElement.parentNode.childNodes[1].childNodes[1].innerText;
     
+    const data = {
+        id: idComentario
+    }
+
+    const url = "http://localhost:8080/api/eliminarComentario";
+
+    sendData(url, data, "DELETE");
+
 }

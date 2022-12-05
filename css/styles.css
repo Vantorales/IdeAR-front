@@ -362,6 +362,7 @@ section.profileComment {
     flex-direction: column;
     padding: 2rem;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 section.profileComment span.info.Username{
